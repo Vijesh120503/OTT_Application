@@ -92,12 +92,10 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5); /* Optional background */
-  opacity: 0.2;
+  opacity: 1;
   transition: opacity 0.3s;
   z-index: 10;
 }
-<<<<<<< HEAD
-=======
 
 .video-thumbnail.hidden {
   opacity: 0; /* Hide the thumbnail when the video starts playing */
@@ -119,7 +117,7 @@ button:hover {
 }
 
 .video-thumbnail.visible {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .video-thumbnail img {
