@@ -1,0 +1,212 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+}
+.play, .flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  gap: 9px;
+}
+
+.side-nav{
+  z-index: 2000;
+}
+.son {
+  width: 320px;
+  height:auto;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 1px 1px 10px rgb(85, 83, 83);
+}
+.stream{
+  width: 400px;
+  height:auto;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 1px 1px 10px rgb(85, 83, 83);
+  margin-bottom:10px;
+}
+.songs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.son img {
+  width: 230px;
+  height: 210px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.stream img{
+  width: 400px;
+  height:312px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 1px 1px 10px rgb(85, 83, 83);
+}
+.son p ,.stream p{
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #b3a6a6;
+}
+.son a{
+  text-decoration:none;
+}
+.son:hover , .stream:hover{
+  transform: scale(1.05);
+}
+.son h2,.stream h2{
+    margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #b3a6a6;
+}
+
+.somgg{
+  padding: 100px;
+}
+@media (max-width: 768px) {
+  .play, .flex{
+      gap: 5px;
+  }
+  .son {
+      width: 115px;
+      height:auto;
+      margin-top: 30px;
+  }
+  .stream {
+      width: 100%;
+      height:auto;
+      margin-top: 30px
+  }
+
+  .son img {
+      width: 90px;
+      height: 150px;
+  }
+  .stream img{
+      width: 90%;
+      height: 180px;
+  }
+
+  .son p,.stream p {
+      margin-top: 3px;
+      font-size: 14px;
+  }
+  
+
+  .plr {
+    width: 100%;
+}
+}
+
+
+video {
+  width: 100%;
+  height: auto;
+}
+.vlc{
+  color: rgb(244, 3, 3);
+  margin-left: 10px;
+  margin-right: 3px;
+}
+.vlc2{
+  margin-left: 8px;
+  color: rgb(183, 106, 255);
+}
+.bt{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap:wrap;
+
+}
+.btt{
+  height: 30px;
+  color:  #b3a6a6;
+  background-color: rgb(47, 45, 45);
+  border: none;
+  cursor: pointer;
+  padding-top: 7px;
+}
+
+.search-bar {
+  width: 92%;
+  padding: 8px;
+  margin-bottom: 16px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: white;
+}
+
+
+
+/* payment */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  h2{
+    color: rgb(0, 0, 0);
+    background-color: white;
+  }
+  h3{
+    color: rgb(0, 0, 0);
+    background-color: white;
+  }
+}
+
+.qr-image {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.cancel-btn, .paynow-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: red;
+  color: white;
+}
+
+.paynow-btn {
+  background-color: green;
+  color: white;
+}
