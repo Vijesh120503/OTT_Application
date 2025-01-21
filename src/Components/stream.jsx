@@ -57,7 +57,7 @@ const FT = () => {
                     team_1_flag: "",
                     team_2_flag: "",
                     status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
-                    hls:match.startTime,
+                    hls:match.logo,
                 }));
 
                 const matchesFromSecondJson = data3.matches.map((match) => ({
