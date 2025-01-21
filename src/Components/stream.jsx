@@ -30,11 +30,11 @@ const FT = () => {
     match_id: match.contentId,
     match_name: match.hmac_url !== null ? match.episodeTitle : `UPCOMING - ${match.title}`,
     banner: match.landscapeThumb,
-    stream_link: match.title.startsWith("WWE RAW") || match.title.startsWith("WWE SMACKDOWN")
+    stream_link: match.portraitThumb.includes("tam_tel")
         ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
-        : match.hmac_url !== null
-        ? match.pub_url
-        : null,
+        : match.title.startsWith("WWE RAW") || match.title.startsWith("WWE SMACKDOWN")
+        ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
+        : match.pub_url,
     team_1: match.homeTeam || "",
     team_2: match.awayTeam || "",
     team_1_flag: "",
