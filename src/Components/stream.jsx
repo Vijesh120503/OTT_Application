@@ -27,21 +27,25 @@ const FT = () => {
 
                 // Normalize the match data for each JSON
                 const matchesFromFirstJson = data1.matches.map((match) => ({
-                    match_id: match.contentId,
-                    match_name: match.hmac_url !== null ? match.episodeTitle : `UPCOMING - ${match.title}`,
-                    banner: match.landscapeThumb,
-                    stream_link: match.hmac_url !== null ? match.pub_url : null,
-                    team_1: match.homeTeam || "",
-                    team_2: match.awayTeam || "",
-                    team_1_flag: "",
-                    team_2_flag: "",
-                    status: match.hmac_url !== null ? "LIVE" : "UPCOMING",
-                    category: match.event_category || "",
-                    broadcast_channel: match.broadcastChannel || "",
-                    date: match.hmac_url !== null 
-                        ? "Live Now" 
-                        : match.title.split("-").pop().trim(),
-                }));
+    match_id: match.contentId,
+    match_name: match.hmac_url !== null ? match.episodeTitle : `UPCOMING - ${match.title}`,
+    banner: match.landscapeThumb,
+    stream_link: match.title.startsWith("WWE RAW") || match.title.startsWith("WWE SMACKDOWN")
+        ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
+        : match.hmac_url !== null
+        ? match.pub_url
+        : null,
+    team_1: match.homeTeam || "",
+    team_2: match.awayTeam || "",
+    team_1_flag: "",
+    team_2_flag: "",
+    status: match.hmac_url !== null ? "LIVE" : "UPCOMING",
+    category: match.event_category || "",
+    broadcast_channel: match.broadcastChannel || "",
+    date: match.hmac_url !== null 
+        ? "Live Now" 
+        : match.title.split("-").pop().trim(),
+}));
 
                 const matchesFromThirdJson = data2.map((match) => ({
                     match_id: match.id,
