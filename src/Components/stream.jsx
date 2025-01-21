@@ -42,8 +42,8 @@ const FT = () => {
     status: match.hmac_url !== null ? "LIVE" : "UPCOMING",
     category: match.event_category || "",
     broadcast_channel: match.broadcastChannel || "",
-    date: match.hmac_url !== null 
-        ? "Live Now" 
+    date: match.hmac_url !== null
+        ? "Live Now"
         : match.title.split("-").pop().trim(),
 }));
 
