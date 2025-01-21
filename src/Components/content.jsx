@@ -354,7 +354,9 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
                 match_id: match.contentId || "unknown",
                 match_name: match.episodeTitle || "Unnamed Match",
                 banner: match.portraitThumb || "",
-                stream_link: match.title.startsWith("WWE RAW") || match.title.startsWith("WWE SMACKDOWN")
+                stream_link: match.portraitThumb.includes("tam_tel")
+        ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
+        : match.title.startsWith("WWE RAW") || match.title.startsWith("WWE SMACKDOWN")
         ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
         : match.pub_url,
   
