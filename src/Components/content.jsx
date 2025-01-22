@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import './live.css';
 const stream = [
 //{name:'BRH vs SYS',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkaNjFqHKLIoqmOhx8KSXXG69AhjEngPkNZHCBjqrXRUa67hy8CHLMW1dA&s=10',link:''},
-  {name:'1st T20',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5057/1737535935057-i',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fottb.live.cf.ww.aiv-cdn.net%2Flhr-nitro%2Flive%2Fclients%2Fdash%2Fenc%2Fwf8usag51e%2Fout%2Fv1%2Fbd3b0c314fff4bb1ab4693358f3cd2d3%2Fcenc.mpd%3F&keyid=ae26845bd33038a9c0774a0981007294&key=63ac662dde310cfb4cc6f9b43b34196d&cookie=&userAgent='},
+  {name:'1st T20',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7822/1737535877822-h',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fottb.live.cf.ww.aiv-cdn.net%2Flhr-nitro%2Flive%2Fclients%2Fdash%2Fenc%2Fwf8usag51e%2Fout%2Fv1%2Fbd3b0c314fff4bb1ab4693358f3cd2d3%2Fcenc.mpd%3F&keyid=ae26845bd33038a9c0774a0981007294&key=63ac662dde310cfb4cc6f9b43b34196d&cookie=&userAgent='},
   //{name:'PR vs PC',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_2048/sources/r1/cms/prod/532/1735025930532-a',link:'https://darshan.glitch.me/play.html?manifest=https%3A%2F%2Famg01269-amg01269c1-willowtv-us-5479.playouts.now.amagi.tv%2Fplaylist%2Famg01269-willowtvfast-willowplus-willowtvus%2Fplaylist.m3u8&drmToggle=false&drmType=clearkey&keyId=&key=&licenseUrl='},
   ];
   
