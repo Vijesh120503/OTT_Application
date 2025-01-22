@@ -129,7 +129,7 @@ const FT = () => {
     }
 
     if (error) {
-        return <div style={{ color: 'red' } >{error}</div>;
+        return <div>{error}</div>;
     }
 
     return (
