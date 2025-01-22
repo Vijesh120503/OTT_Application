@@ -124,7 +124,9 @@ const FT = () => {
     }, []);
 
     if (loading) {
-        return <div>Loading matches...</div>;
+        return <div style="color: white;">Loading matches...</div>
+
+
     }
 
     if (error) {
