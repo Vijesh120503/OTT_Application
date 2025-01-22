@@ -124,13 +124,12 @@ const FT = () => {
     }, []);
 
     if (loading) {
-        return <div style="color: white;">Loading matches...</div>
-
+       return <div style={{ color: 'white' }}>Loading matches...</div>;
 
     }
 
     if (error) {
-        return <div>{error}</div>;
+        return <div style={{ color: 'red' } >{error}</div>;
     }
 
     return (
