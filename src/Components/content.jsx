@@ -329,7 +329,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
   const fetchAndRenderMatches = async (containerId) => {
     const container = document.getElementById(containerId);
     if (!container) return;
-    container.innerHTML = '<p>Loading matches...</p>';
+    container.innerHTML = '<p style="color: white;">Loading matches...</p>';
     try {
         const [response1, response2, response3, response4] = await Promise.all([
             fetch('https://sony-eight.vercel.app/'),
@@ -418,7 +418,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
 
         // Render live matches
         if (liveMatches.length === 0) {
-            container.innerHTML = '<p>No live matches available right now.</p>';
+            container.innerHTML = '<p style="color: white;">No live matches available right now.</p>';
             return;
         }
 
@@ -445,7 +445,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             container.appendChild(matchDiv);
         });
     } catch (error) {
-        container.innerHTML = '<p>Error fetching matches. Please try again later.</p>';
+        container.innerHTML = '<p style="color: white;">Error fetching matches. Please try again later.</p>';
         console.error(error);
     }
 };
