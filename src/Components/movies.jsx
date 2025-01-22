@@ -11,8 +11,8 @@ const shows = [
     shows: [
         
         {name:'Nesipaya',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg38E5RLN1mIxVin9Pr3svtyxJuw4oEE74uRUYX1eXMEWXAfJdVbwP4ZVd&s=10',link:'https://dls3.mrfooll.xyz/AgADHB3368261'},
-        {name:'Kathallika Neramilai',image:'https://aws1.vdkimg.com/film/1/4/6/3/1463493_poster_scale_480x640.jpg',link:'https://cdp.tamilcloud.pro/Kadhalikka%20Neramillai%20(2025)/Tamilkolly.Life%20-%20Kadhalikka%20Neramillai%20(2025)%20Tamil%20HQ%20PreDVD%20720p%20900MB.mp4?dl=true'},
-        {name:'Madha Gaja Raja',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZErTiqkfmjiYGkulqkm9goap_Q7xVpuyRHIOgejmQvvxRWMA1dQc6yyDI&s=10',link:'https://dls4.mrfooll.xyz/3341077/Madha+Gaja+Raja+%282025%29+Tamil+HQ+PreDVD+-+720p+-+x264+-+HQ+Cl.mkv?hash=AgADkx'},
+        {name:'Kathallika Neramilai',image:'https://aws1.vdkimg.com/film/1/4/6/3/1463493_poster_scale_480x640.jpg',link:'https://dl10.hotshare.click/Kadhalikka_Neramillai_2025_PreDVD_720p_HD.mp4'},
+        //{name:'Madha Gaja Raja',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZErTiqkfmjiYGkulqkm9goap_Q7xVpuyRHIOgejmQvvxRWMA1dQc6yDI&s=10',link:'https://dls4.mrfooll.xyz/3341077/Madha+Gaja+Raja+%282025%29+Tamil+HQ+PreDVD+-+720p+-+x264+-+HQ+Cl.mkv?hash=AgADkx'},
         {name:'Vanangan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU', link:'https://dls3.mrfooll.xyz/AgADhx3340181'},
         //{name:'Game Changer',image:'https://assetscdn1.paytm.com/images/cinema/WhatsApp%20Image%202025-01-06%20at%2013.39.30-ad954b40-cc05-11ef-912e-2154ccd78c0a.jpeg',link:'https://dls4.mrfooll.xyz/AgAD7R3315981'},
     ],
