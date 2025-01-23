@@ -60,19 +60,40 @@ const FT = () => {
                     
                 }));
 
-                const matchesFromSecondJson = data3.matches.map((match) => ({
-                    match_id: match.match_id,
-                    match_name: match.status === 'UPCOMING' ? 'UPCOMING' : match.title,
-                    banner: match.src,
-                    stream_link: match.status === 'UPCOMING' ? null : match.adfree_url,
-                    team_1: match.team_1,
-                    team_2: match.team_2,
-                    team_1_flag: match.team_1_flag,
-                    team_2_flag: match.team_2_flag,
-                    status: match.status === 'UPCOMING' ? "UPCOMING" : "LIVE",
-                    date: match.startTime,
-                    hls:match.startTime,
-                }));
+const matchesFromThirdJson = data3.map((match) => ({
+    match_id: match.id,
+    match_name: match.status === 'upcoming' ? 'Upcoming' : match.title,
+    banner: match.logo,
+    stream_link: match.status === 'upcoming' ? null : modifyUrl(match.link),
+    team_1: "",
+    team_2: "",
+    team_1_flag: "",
+    team_2_flag: "",
+    status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
+    hls: match.logo,
+}));
+
+// Helper function to modify the URL
+function modifyUrl(url) {
+    if (!url) return null; // Handle null or undefined URLs
+
+    // Strip parameters if present
+    const strippedUrl = url.split('?')[0];
+
+    // Check if the URL is already in the desired format
+    if (strippedUrl.includes('-cf.jiocinema.com')) {
+        return strippedUrl; // Leave it as is
+    }
+
+    // Remove 'p' from 'sportsp'
+    const withoutP = strippedUrl.replace('sportsp', 'sports');
+
+    // Add '-cf' before '.jiocinema'
+    const finalUrl = withoutP.replace('.jiocinema', '-cf.jiocinema');
+
+    return finalUrl;
+}
+
 
                 // Normalize data from the new API (fourth JSON)
                 const matchesFromFourthJson = data4.matches.map((match) => {
