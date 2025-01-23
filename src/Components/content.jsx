@@ -364,14 +364,33 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             }));
 
         // Normalize data from the second JSON
-        const matchesFromSecondJson = data2
+const matchesFromSecondJson = data2
             .map((match) => ({
                 match_id: match.id || 'unknown',
                 match_name: match.title || 'Unnamed Match',
                 banner: match.logo || '',
-                stream_link: match.link || '',
-              hls:match.adfree_url,
+                stream_link: match.status === 'upcoming' ? null : modifyUrl(match.link),
+              hls:match.logo,
             }));
+            function modifyUrl(url) {
+              if (!url) return null; // Handle null or undefined URLs
+          
+              // Strip parameters if present
+              const strippedUrl = url.split('?')[0];
+          
+              // Check if the URL is already in the desired format
+              if (strippedUrl.includes('-cf.jiocinema.com')) {
+                  return strippedUrl; // Leave it as is
+              }
+          
+              // Remove 'p' from 'sportsp'
+              const withoutP = strippedUrl.replace('sportsp', 'sports');
+          
+              // Add '-cf' before '.jiocinema'
+              const finalUrl = withoutP.replace('.jiocinema', '-cf.jiocinema');
+          
+              return finalUrl;
+          }
 
         // Normalize and filter live matches for the third JSON
         const matchesFromThirdJson = data3.matches
