@@ -23,7 +23,7 @@ const shows = [
     image: 'https://play-lh.googleusercontent.com/5lGwoUsh5Z1eopCpGQIQjfoGqUHTJU_tAXNkdm1eiBVGGKoXqk5jX8Vm7DiAn42Lwbk6',
     shows: [
         {name:"Alangu",image:'https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FvIGm5rPFd5mSnrzdrtKi7VoxpQj.jpg',link:'https://dls3.mrfooll.xyz/AgADAR3396947'},
-        {name:"The Smile Man",image:'https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fp8J4IroY8tzRrtEckuetnMKLc42.jpg',link:'https://dls3.mrfooll.xyz/AgADnx3396953'},
+        {name:"The Smile Man",image:'https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fp8J4IroY8tzRrtEckuetnMKLc42.jpg',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/The_Smile_Man.mp4'},
         {name:'Viduthalai 2', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX7lrsHalT6c2XvmrNbOO3a3f0YFbKbpT5JEGyR1C00KhvdEShO9diMbw&s=10',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/Viduthalai_Part_2.mp4'}, 
        {name:'Miss You', image:'https://m.media-amazon.com/images/M/MV5BZjFlOTg1MDUtYTMwOS00MDBlLWE4ZjAtZjAzZWJjYzEyZWNjXkEyXkFqcGc@._V1_.jpg',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/Miss_You.mp4'}, 
       {name:'Soodhu Kavvum 2',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF5A5s85hmdSY-b3Wfd_nR4O7jUHobQy3uBGiESgEFmmljs5hjU7buCWmz&s=10',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/Soodhu_Kavvum_2.mp4'},
