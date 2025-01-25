@@ -21,7 +21,7 @@ const shows = [
     image: 'https://play-lh.googleusercontent.com/5lGwoUsh5Z1eopCpGQIQjfoGqUHTJU_tAXNkdm1eiBVGGKoXqk5jX8Vm7DiAn42Lwbk6',
     shows: [
         {name:'Vanangaan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vanangaan%20(2025)%20Tamil%20HDRip%20-%20720p%20-%20x264%20-%20(AAC%202.0)%20-%201.4GB.mkv'},
-        {name:'Madha Gaja Raja',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZErTiqkfmjiYGkulqkm9goap_Q7xVpuyRHIOgejmQvvxRWMA1dQc6yDI&s=10',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vanangaan%20(2025)%20Tamil%20HDRip%20-%20720p%20-%20x264%20-%20(AAC%202.0)%20-%201.4GB.mkv'},
+        {name:'Madha Gaja Raja',image:'https://images.jdmagicbox.com/comp/jd_social/news/2018jul24/image-139962-cobm4nu9gq.jpg',link:'https://tsneh.vercel.app/8qmsky-oxplc'},
         {name:'Thiru Manickam',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGTCw5Ktxd-t70okCzWMUKEeUTQT_f4SXCuw&usqp=CAU',link:'https://tsneh.vercel.app/lmy41gd-tbrt'},
         {name:"Alangu",image:'https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FvIGm5rPFd5mSnrzdrtKi7VoxpQj.jpg',link:'https://tsneh.vercel.app/pqwq91acw83q'},
         {name:"The Smile Man",image:'https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fp8J4IroY8tzRrtEckuetnMKLc42.jpg',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/The_Smile_Man.mp4'},
