@@ -357,7 +357,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
                 banner: match.portraitThumb || "",
                 stream_link: match.portraitThumb.includes("tam_tel")
         ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
-        : match.title.startsWith("WWE RAW") || match.title.startsWith("HOCKEY")
+        : match.title.startsWith("WWE") || match.title.startsWith("HOCKEY")
         ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
         : match.pub_url,
   
