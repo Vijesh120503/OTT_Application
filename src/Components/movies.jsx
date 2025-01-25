@@ -9,7 +9,7 @@ const shows = [
     name: 'Theatre Print',
     image: 'https://s2.r29static.com/bin/entry/2ab/0,791,5615,2948/x,80/1650643/image.jpg',
     shows: [
-        
+        {name:'Kudumbasthan',image:'https://assetscdn1.paytm.com/images/cinema/Kudumbasthan-Poster-a4577dc0-d7e3-11ef-83bf-1dede4761f84.jpg',link:'https://dls3.mrfooll.xyz/AgADJR3465656'},
         {name:'Nesipaya',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg38E5RLN1mIxVin9Pr3svtyxJuw4oEE74uRUYX1eXMEWXAfJdVbwP4ZVd&s=10',link:'https://dls3.mrfooll.xyz/AgADHB3368261'},
         {name:'Kathallika Neramilai',image:'https://aws1.vdkimg.com/film/1/4/6/3/1463493_poster_scale_480x640.jpg',link:'https://dl10.hotshare.click/Kadhalikka_Neramillai_2025_PreDVD_720p_HD.mp4'},
        
