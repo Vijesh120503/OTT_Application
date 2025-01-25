@@ -90,7 +90,7 @@ const matchesFromThirdJson = data2.map((match) => ({
                     team_2: match.team_2,
                     team_1_flag: match.team_1_flag,
                     team_2_flag: match.team_2_flag,
-                    status: match.status === 'UPCOMING' ? "UPCOMING" : "LIVE",
+                    status: match.status === 'UPCOMING' ? "UPCOMING" || match.status==='PAUSED'? "UPCOMING": "LIVE",
                     date: match.startTime,
                     hls:match.startTime,
                 }));
