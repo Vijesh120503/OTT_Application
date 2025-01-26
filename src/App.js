@@ -5,7 +5,6 @@ import Movies from './Components/movies';
 import Shows from './Components/Shows';
 import Kids from './Components/kids';
 import Livetwo from './Components/LIVETWO';
-import Album from './Components/navalbums';
 import Series from './Components/Series';
 import Video from './Components/video';
 import Stream from './Components/stream';
@@ -19,7 +18,12 @@ const App = () => {
   const handleNavClick = (component) => {
     setActiveComponent(component);
     window.history.pushState({ activeComponent: component }, '');
+  
+    if (component === 'Albums') {
+      window.location.href = 'https://shadow-music.netlify.app/'; // Opens in the same tab
+    }
   };
+  
 
   const handleSongChange = (song) => {
     setCurrentSong(song);
@@ -60,24 +64,20 @@ const App = () => {
             onAudioChange={handleAudioChange} 
           />
           {currentSong && currentSong.image && (
-  <div className="songg">
-    <h3>Now Playing</h3>
-    <img src={currentSong.image} alt={currentSong.name} /><br/>
-    <button onClick={togglePlayPause} className="player-button">
-      {isPlaying ? 'Pause' : 'Play'}
-    </button>
-  </div>
-)}
-
+            <div className="songg">
+              <h3>Now Playing</h3>
+              <img src={currentSong.image} alt={currentSong.name} /><br />
+              <button onClick={togglePlayPause} className="player-button">
+                {isPlaying ? 'Pause' : 'Play'}
+              </button>
+            </div>
+          )}
         </>
       )}
-      {/* {activeComponent === 'live' && <Livetv />} */}
       {activeComponent === 'vlc' && <Livetwo />}
       {activeComponent === 'Movies' && <Movies />}
-      {/* {activeComponent === 'FT' && <FT />} */}
       {activeComponent === 'Shows' && <Shows />}
       {activeComponent === 'Kids' && <Kids />}
-      {activeComponent === 'Albums' && <Album />}
       {activeComponent === 'Series' && <Series />}
       {activeComponent === 'Vid' && <Video />}
       {activeComponent === 'stream' && <Stream />}
