@@ -364,14 +364,20 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             }));
 
         // Normalize data from the second JSON
-const matchesFromSecondJson = data2
-            .map((match) => ({
-                match_id: match.id || 'unknown',
-                match_name: match.title || 'Unnamed Match',
-                banner: match.logo || '',
-                stream_link: match.status === 'upcoming' ? null : modifyUrl(match.link),
-              hls:match.logo,
-            }));
+        const matchesFromSecondJson = Array.from(
+          new Map(
+              data2.map((match) => [
+                  match.id || 'unknown', // Use `match.id` or 'unknown' as the unique key
+                  {
+                      match_id: match.id || 'unknown',
+                      match_name: match.title || 'Unnamed Match',
+                      banner: match.logo || '',
+                      stream_link: match.status === 'upcoming' ? null : modifyUrl(match.link),
+                      hls: match.logo,
+                  }
+              ])
+          ).values() // Extract only the values (unique matches)
+      );
             function modifyUrl(url) {
               if (!url) return null; // Handle null or undefined URLs
           
