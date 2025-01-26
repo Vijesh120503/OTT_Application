@@ -47,18 +47,26 @@ const FT = () => {
         : match.title.split("-").pop().trim(),
 }));
 
-const matchesFromThirdJson = data2.map((match) => ({
-                    match_id: match.id,
-                    match_name: match.status === 'upcoming' ? 'Upcoming' : match.title,
-                    banner: match.logo,
-                    stream_link: match.status === 'upcoming' ? null : modifyUrl(match.link),
-                    team_1: "",
-                    team_2: "",
-                    team_1_flag: "",
-                    team_2_flag: "",
-                    status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
-                    hls: match.logo,
-                }));
+const matchesFromThirdJson = Array.from(
+    new Map(
+        data2.map((match) => [
+            match.id, // Use `match.id` as the unique key
+            {
+                match_id: match.id,
+                match_name: match.status === 'upcoming' ? 'Upcoming' : match.title,
+                banner: match.logo,
+                stream_link: match.status === 'upcoming' ? null : modifyUrl(match.link),
+                team_1: "",
+                team_2: "",
+                team_1_flag: "",
+                team_2_flag: "",
+                status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
+                hls: match.logo,
+            }
+        ])
+    ).values() // Extract only the values (unique matches)
+);
+;
                 
                 // Helper function to modify the URL
                 function modifyUrl(url) {
