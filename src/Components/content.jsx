@@ -336,17 +336,17 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             fetch('https://sony-eight.vercel.app/'),
             fetch('https://jiocinema-livid.vercel.app/'),
             fetch('https://fancode-two.vercel.app/'),
-            fetch('https://gxr.vercel.app/'), // New API
+           // fetch('https://gxr.vercel.app/'), // New API
         ]);
         
-        if (!response1.ok || !response2.ok || !response3.ok || !response4.ok) {
+        if (!response1.ok || !response2.ok || !response3.ok) {
             throw new Error('Failed to fetch matches');
         }
         
         const data1 = await response1.json();
         const data2 = await response2.json();
         const data3 = await response3.json();
-        const data4 = await response4.json(); // New API data
+      //  const data4 = await response4.json(); // New API data
 
         // Normalize and filter live matches for the first JSON
         const matchesFromFirstJson = data1.matches
@@ -410,7 +410,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             }));
 
         // Normalize data from the fourth JSON (with ClearKey DRM handling)
-        const matchesFromFourthJson = data4.matches
+      {/* const matchesFromFourthJson = data4.matches
         .filter((match) => match.current_state==='live') // Filter only live matches
         .map((match) => {
             const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
@@ -426,9 +426,9 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
                 lic_url: match.lic_url, // Licensing URL for DRM content
                 lic_token: match.lic_token, // DRM token for secure streaming
             };
-        });
+        });*/}
     
-    console.log(matchesFromFourthJson); // To check the filtered live matches
+  //  console.log(matchesFromFourthJson); // To check the filtered live matches
     
     
 
@@ -437,7 +437,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             ...matchesFromFirstJson,
             ...matchesFromSecondJson,
             ...matchesFromThirdJson,
-            ...matchesFromFourthJson, // Include fourth JSON data
+           // ...matchesFromFourthJson, // Include fourth JSON data
         ];
 
         container.innerHTML = '';
