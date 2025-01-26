@@ -13,7 +13,7 @@ const FT = () => {
                     fetch('https://sony-eight.vercel.app/'),
                     fetch('https://jiocinema-livid.vercel.app/'),
                     fetch('https://fancode-two.vercel.app/'),
-                    fetch('https://gxr.vercel.app/'), // New API
+                   fetch('https://gxr.vercel.app/'), // New API
                 ]);
 
                 if (!response1.ok || !response2.ok || !response3.ok || !response4.ok) {
@@ -133,7 +133,7 @@ const matchesFromThirdJson = Array.from(
                     ...matchesFromFirstJson,
                     ...matchesFromThirdJson,
                     ...matchesFromSecondJson,
-                    ...matchesFromFourthJson, // Include new API data
+                   //...matchesFromFourthJson, // Include new API data
                 ].sort((a, b) => {
                     if (a.status === "LIVE" && b.status !== "LIVE") return -1;
                     if (a.status !== "LIVE" && b.status === "LIVE") return 1;
