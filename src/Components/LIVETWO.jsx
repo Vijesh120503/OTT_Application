@@ -5,7 +5,7 @@ const channels = [
   //{ name: 'Vijay Takkar', image: 'https://news.indiantvinfo.com/media/2022/09/Logo-of-Vijay-Takkar-Channel-300x300.png', link: 'https://stream.vstartv.org:3511/hybrid/play.m3u8' },
 // { name: 'SS Tamil', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQop8ucdt1JVIfgEzRt4K8A6AoRZ-DfftdXvSBfE2Pm8IBKBfA9Jwo61Es4&s=10',link:'albaniaserver.com/play/live.php?mac=00:1A:79:5C:C1:11&stream=441095&extension=ts&play_token=zr3DwTDkQA'},
   //{ name: 'Vijay Super', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQjonzzKzBGJJKpe1_FrbiyAwiMGAEGftloixlGuyIqiS6rRIkFTDArP4&s=10', link: 'https://tinyurl.com/yc3mav2k' },
-//  { name: 'Star Vijay', image: 'https://tinyurl.com/2heavac5', link: 'https://allinonereborn.com/tatatv.php?id=924'},
+{ name: 'Star Vijay', image: 'https://tinyurl.com/2heavac5', link: 'http://45.148.145.57/IN_VIJAYTVHD/tracks-v1a1/mono.m3u8?token=cd159980c105201c2cfbd5910e8facca'},
   { name: 'Sun TV', image: 'https://tinyurl.com/55rjk5ka', link: 'https://tsneh.vercel.app/vwtb7qm7faty'},
   { name: 'K TV', image: 'https://seeklogo.com/images/K/ktv-logo-703754480A-seeklogo.com.png', link: 'https://tsneh.vercel.app/dlae4g3ooovq'},
   {name:'Adithya',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Nhg12EtEEy3aFfRgcM2S0CwMaW1wGiI_8Y7B-RRqMW56HWbx0ebgQsM&s=10',link:'https://shadowplayer.netlify.app/?manifest=https%3A%5C%2F%5C%2Fsundirectgo-live.pc.cdn.bitgravity.com%5C%2Fhd7%5C%2Fdth.mpd&keyid=13400829c2294d009e9c12f516fd63d3&key=e84d17d4090e15bc6c5b4b80f589a343&cookie=&userAgent='},
