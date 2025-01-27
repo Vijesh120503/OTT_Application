@@ -189,7 +189,7 @@ const matchesFromThirdJson = Array.from(
                                 ? undefined
                                 : () => {
                                     if (match.stream_link && match.clearkey_hex_key1 && match.clearkey_hex_key2) {
-                                     const playerUrl = `https://shadowplayer.netlify.app/?manifest=${match.stream_link}&keyid=${match.clearkey_hex_key1}&key==${match.clearkey_hex_key2}&cookie=&userAgent=`;
+                                     const playerUrl = `https://shadowplayer.netlify.app/?manifest=${match.stream_link}&keyid=${match.clearkey_hex_key1}&key=${match.clearkey_hex_key2}&cookie=&userAgent=`;
                                     window.open(playerUrl, '_blank');
                                     } 
                                     if (match.stream_link && match.hls) {
