@@ -34,7 +34,7 @@ const FT = () => {
                 match_id: match.match_id || 'unknown',
                 match_name: match.title || 'Unnamed Match',
                banner: match.image_urls?.['4k'] || "",
-                stream_link: match.adfree_url || '',
+                stream_link: match.m3u8_url || null,
                 status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
               
             }));
