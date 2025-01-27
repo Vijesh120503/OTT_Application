@@ -16,7 +16,7 @@ const FT = () => {
                    fetch('https://gxr.vercel.app/'), // New API
                 ]);
 
-                if (!response1.ok || !response2.ok || !response3.ok || response4.ok) {
+                if (!response1.ok || !response2.ok || !response3.ok || !response4.ok) {
                     throw new Error("Failed to fetch matches");
                 }
 
