@@ -9,7 +9,7 @@ const FT = () => {
     useEffect(() => {
         const fetchMatches = async () => {
             try {
-                const [response1, response2, response3] = await Promise.all([
+                const [response1, response2, response3,response4] = await Promise.all([
                     fetch('https://sony-eight.vercel.app/'),
                     fetch('https://jiocinema-livid.vercel.app/'),
                     fetch('https://fancode-two.vercel.app/'),
