@@ -13,17 +13,17 @@ const FT = () => {
                     fetch('https://sony-eight.vercel.app/'),
                     fetch('https://jiocinema-livid.vercel.app/'),
                     fetch('https://fancode-two.vercel.app/'),
-                   //fetch('https://gxr.vercel.app/'), // New API
+                   fetch('https://gxr.vercel.app/'), // New API
                 ]);
 
-                if (!response1.ok || !response2.ok || !response3.ok) {
+                if (!response1.ok || !response2.ok || !response3.ok || response4.ok) {
                     throw new Error("Failed to fetch matches");
                 }
 
                 const data1 = await response1.json();
                 const data2 = await response2.json();
                 const data3 = await response3.json();
-                //const data4 = await response4.json(); // New API data
+                const data4 = await response4.json(); // New API data
 
                 // Normalize the match data for each JSON
                 const matchesFromFirstJson = data1.matches.map((match) => ({
@@ -104,7 +104,7 @@ const matchesFromThirdJson = Array.from(
                 }));
 
                 // Normalize data from the new API (fourth JSON)
-                {/*  const matchesFromFourthJson = data4.matches.map((match) => {
+                  const matchesFromFourthJson = data4.matches.map((match) => {
                     const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
                     const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
 
@@ -126,14 +126,14 @@ const matchesFromThirdJson = Array.from(
                         clearkey_base64: match.clearkey_base64, // If using ClearKey for DRM
                         
                     };
-                });*/}
+                });
 
                 // Combine and sort matches
                 const allMatches = [
                     ...matchesFromFirstJson,
                     ...matchesFromThirdJson,
                     ...matchesFromSecondJson,
-                   //...matchesFromFourthJson, // Include new API data
+                   ...matchesFromFourthJson, // Include new API data
                 ].sort((a, b) => {
                     if (a.status === "LIVE" && b.status !== "LIVE") return -1;
                     if (a.status !== "LIVE" && b.status === "LIVE") return 1;
