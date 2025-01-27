@@ -9,8 +9,8 @@ const FT = () => {
     useEffect(() => {
         const fetchMatches = async () => {
             try {
-                const [response1, response2, response3,response4,response5] = await Promise.all([
-                    fetch('https://shadow-1205-hotstar.vercel.app/'), 
+                const [response1, response2, response3,response4] = await Promise.all([
+                    // fetch('https://shadow-1205-hotstar.vercel.app/'), 
                     fetch('https://sony-eight.vercel.app/'),
                     fetch('https://jiocinema-livid.vercel.app/'),
                     fetch('https://fancode-two.vercel.app/'),
@@ -26,21 +26,21 @@ const FT = () => {
                 const data2 = await response2.json();
                 const data3 = await response3.json();
                 const data4 = await response4.json(); // New API data
-                const data5 = await response5.json(); // New API data
+                // const data5 = await response5.json(); // New API data
 
-                 const matchesFromHotstar = data1.matches
-            .filter(match => match.m3u8_url) // Filter only live matches
-            .map((match) => ({
-                match_id: match.match_id || 'unknown',
-                match_name: match.title || 'Unnamed Match',
-               banner: match.image_urls?.['4k'] || "",
-                stream_link: match.m3u8_url || null,
-                status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
+            //      const matchesFromHotstar = data1.matches
+            // .filter(match => match.m3u8_url) // Filter only live matches
+            // .map((match) => ({
+            //     match_id: match.match_id || 'unknown',
+            //     match_name: match.title || 'Unnamed Match',
+            //    banner: match.image_urls?.['4k'] || "",
+            //     stream_link: match.m3u8_url || null,
+            //     status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
               
-            }));
+            // }));
 
                 // Normalize the match data for each JSON
-                const matchesFromFirstJson = data2.matches.map((match) => ({
+                const matchesFromFirstJson = data1.matches.map((match) => ({
     match_id: match.contentId,
     match_name: match.hmac_url !== null ? match.episodeTitle : `UPCOMING - ${match.title}`,
     banner: match.landscapeThumb,
@@ -63,7 +63,7 @@ const FT = () => {
 
 const matchesFromThirdJson = Array.from(
     new Map(
-        data3.map((match) => [
+        data2.map((match) => [
             match.id, // Use `match.id` as the unique key
             {
                 match_id: match.id,
@@ -103,7 +103,7 @@ const matchesFromThirdJson = Array.from(
                     return finalUrl;
                 }
 
-            const matchesFromSecondJson = data4.matches.map((match) => ({
+            const matchesFromSecondJson = data3.matches.map((match) => ({
                     match_id: match.match_id,
                     match_name: match.status === 'UPCOMING' ? 'UPCOMING' : match.title,
                     banner: match.src,
@@ -118,7 +118,7 @@ const matchesFromThirdJson = Array.from(
                 }));
 
                 // Normalize data from the new API (fourth JSON)
-                  const matchesFromFourthJson = data5.matches.map((match) => {
+                  const matchesFromFourthJson = data4.matches.map((match) => {
                     const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
                     const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
 
@@ -144,7 +144,7 @@ const matchesFromThirdJson = Array.from(
 
                 // Combine and sort matches
                 const allMatches = [
-                    ...matchesFromHotstar,
+                    // ...matchesFromHotstar,
                     ...matchesFromFirstJson,
                     ...matchesFromThirdJson,
                     ...matchesFromSecondJson,
