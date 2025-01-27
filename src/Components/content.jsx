@@ -421,8 +421,8 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
                 match_name: match.title || 'Unnamed Match',
                 banner: match.image_url || '',
                 stream_link: cleanedStreamLink, // Livestream URL for live matches
-                clearkey_hex_key1: clearkeyParts[0] || null, // First part before the colon
-                clearkey_hex_key2: clearkeyParts[1] || null, // Second part after the colon
+                clearkey_hex_key2: clearkeyParts[0] || null, // First part before the colon
+                clearkey_hex_key1: clearkeyParts[1] || null, // Second part after the colon
                 lic_url: match.lic_url, // Licensing URL for DRM content
                 lic_token: match.lic_token, // DRM token for secure streaming
             };
