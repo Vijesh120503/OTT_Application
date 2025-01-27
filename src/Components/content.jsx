@@ -336,7 +336,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             fetch('https://sony-eight.vercel.app/'),
             fetch('https://jiocinema-livid.vercel.app/'),
             fetch('https://fancode-two.vercel.app/'),
-           // fetch('https://gxr.vercel.app/'), // New API
+            fetch('https://gxr.vercel.app/'), // New API
         ]);
         
         if (!response1.ok || !response2.ok || !response3.ok || !response4.ok) {
