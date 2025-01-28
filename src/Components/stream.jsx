@@ -62,6 +62,7 @@ const FT = () => {
 }));
 
 const matchesFromThirdJson = Array.from(
+const matchesFromThirdJson = Array.from(
     new Map(
         data3.map((match) => [
             match.id, // Use `match.id` as the unique key
@@ -69,7 +70,10 @@ const matchesFromThirdJson = Array.from(
                 match_id: match.id,
                 match_name: match.status === 'upcoming' ? 'Upcoming' : match.title,
                 banner: match.logo,
-                stream_link: match.status === 'upcoming' ? null : modifyUrl(match.link),
+                stream_link: 
+                    match.status === 'upcoming' 
+                        ? null 
+                        : (match.link === 'URL not found' ? 'https://tsneh.vercel.app/tnt1-shadow' : modifyUrl(match.link)),
                 team_1: "",
                 team_2: "",
                 team_1_flag: "",
