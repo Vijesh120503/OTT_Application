@@ -18,7 +18,7 @@ const FT = () => {
                     
                 ]);
 
-                if (!response1.ok || !response2.ok || !response3.ok || !response4.ok || !response5.ok) {
+                if (!response1.ok || !response2.ok || !response3.ok || !response4.ok) {
                     throw new Error("Failed to fetch matches");
                 }
 
