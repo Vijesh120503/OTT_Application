@@ -62,7 +62,6 @@ const FT = () => {
 }));
 
 const matchesFromThirdJson = Array.from(
-const matchesFromThirdJson = Array.from(
     new Map(
         data3.map((match) => [
             match.id, // Use `match.id` as the unique key
