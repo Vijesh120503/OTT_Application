@@ -40,7 +40,7 @@ const FT = () => {
             }));
 
                 // Normalize the match data for each JSON
-                const matchesFromFirstJson = data1.matches.map((match) => ({
+                const matchesFromFirstJson = data2.matches.map((match) => ({
     match_id: match.contentId,
     match_name: match.hmac_url !== null ? match.episodeTitle : `UPCOMING - ${match.title}`,
     banner: match.landscapeThumb,
@@ -63,7 +63,7 @@ const FT = () => {
 
 const matchesFromThirdJson = Array.from(
     new Map(
-        data2.map((match) => [
+        data3.map((match) => [
             match.id, // Use `match.id` as the unique key
             {
                 match_id: match.id,
@@ -103,7 +103,7 @@ const matchesFromThirdJson = Array.from(
                     return finalUrl;
                 }
 
-            const matchesFromSecondJson = data3.matches.map((match) => ({
+            const matchesFromSecondJson = data4.matches.map((match) => ({
                     match_id: match.match_id,
                     match_name: match.status === 'UPCOMING' ? 'UPCOMING' : match.title,
                     banner: match.src,
@@ -118,7 +118,7 @@ const matchesFromThirdJson = Array.from(
                 }));
 
                 // Normalize data from the new API (fourth JSON)
-                  const matchesFromFourthJson = data4.matches.map((match) => {
+                  const matchesFromFourthJson = data5.matches.map((match) => {
                     const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
                     const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
 
