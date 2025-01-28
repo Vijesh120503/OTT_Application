@@ -62,7 +62,7 @@ const FT = () => {
         : match.title.split("-").pop().trim(),
 }));*/}
 
-const matchesFromFirstJson = data.matches.map((match) => ({
+const matchesFromFirstJson = data1.matches.map((match) => ({
     match_id: match.contentId,
     match_name: match.isLive ? match.match_name : match.event_name, // Corrected the backtick
     banner: match.src || "",
