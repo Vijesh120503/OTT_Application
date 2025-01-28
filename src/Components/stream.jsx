@@ -9,8 +9,8 @@ const FT = () => {
     useEffect(() => {
         const fetchMatches = async () => {
             try {
-                const [response1, response2, response3,response4] = await Promise.all([
-                    // fetch('https://shadow-1205-hotstar.vercel.app/'), 
+                const [response1, response2, response3,response4,response5] = await Promise.all([
+                     fetch('https://shadow-1205-hotstar.vercel.app/'), 
                     fetch('https://sony-eight.vercel.app/'),
                     fetch('https://jiocinema-livid.vercel.app/'),
                     fetch('https://fancode-two.vercel.app/'),
@@ -18,7 +18,7 @@ const FT = () => {
                     
                 ]);
 
-                if (!response1.ok || !response2.ok || !response3.ok || !response4.ok) {
+                if (!response1.ok || !response2.ok || !response3.ok || !response4.ok || !response5.ok) {
                     throw new Error("Failed to fetch matches");
                 }
 
@@ -26,18 +26,18 @@ const FT = () => {
                 const data2 = await response2.json();
                 const data3 = await response3.json();
                 const data4 = await response4.json(); // New API data
-                // const data5 = await response5.json(); // New API data
+                const data5 = await response5.json(); // New API data
 
-            //      const matchesFromHotstar = data1.matches
-            // .filter(match => match.m3u8_url) // Filter only live matches
-            // .map((match) => ({
-            //     match_id: match.match_id || 'unknown',
-            //     match_name: match.title || 'Unnamed Match',
-            //    banner: match.image_urls?.['4k'] || "",
-            //     stream_link: match.m3u8_url || null,
-            //     status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
+                  const matchesFromHotstar = data1.matches
+            .filter(match => match.m3u8_url) // Filter only live matches
+             .map((match) => ({
+                 match_id: match.match_id || 'unknown',
+                 match_name: match.title || 'Unnamed Match',
+                banner: match.image_urls?.['4k'] || "",
+               stream_link: match.m3u8_url || null,
+                 status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
               
-            // }));
+            }));
 
                 // Normalize the match data for each JSON
                 const matchesFromFirstJson = data1.matches.map((match) => ({
@@ -144,7 +144,7 @@ const matchesFromThirdJson = Array.from(
 
                 // Combine and sort matches
                 const allMatches = [
-                    // ...matchesFromHotstar,
+                    ...matchesFromHotstar,
                     ...matchesFromFirstJson,
                     ...matchesFromThirdJson,
                     ...matchesFromSecondJson,
