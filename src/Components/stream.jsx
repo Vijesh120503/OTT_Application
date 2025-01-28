@@ -11,7 +11,8 @@ const FT = () => {
             try {
                 const [response1, response2, response3,response4] = await Promise.all([
                     // fetch('https://shadow-1205-hotstar.vercel.app/'), 
-                    fetch('https://sony-eight.vercel.app/'),
+                    //fetch('https://sony-eight.vercel.app/'),
+                    fetch('https://raw.githubusercontent.com/drmlive/sliv-live-events/main/sonyliv.json'),
                     fetch('https://jiocinema-livid.vercel.app/'),
                     fetch('https://fancode-two.vercel.app/'),
                    fetch('https://gxr.vercel.app/'),
@@ -40,7 +41,7 @@ const FT = () => {
             })); */}
 
                 // Normalize the match data for each JSON
-                const matchesFromFirstJson = data1.matches.map((match) => ({
+                {/*const matchesFromFirstJson = data1.matches.map((match) => ({
     match_id: match.contentId,
     match_name: match.hmac_url !== null ? match.episodeTitle : `UPCOMING - ${match.title}`,
     banner: match.landscapeThumb,
@@ -59,6 +60,20 @@ const FT = () => {
     date: match.hmac_url !== null
         ? "Live Now"
         : match.title.split("-").pop().trim(),
+}));*/}
+
+const matchesFromFirstJson = data.matches.map((match) => ({
+    match_id: match.contentId,
+    match_name: match.isLive ? match.match_name : match.event_name, // Corrected the backtick
+    banner: match.src || "",
+    stream_link: match.isLive ? match.pub_url : "",
+    team_1: "", // Not provided in the JSON, leave empty or add logic if needed
+    team_2: "", // Not provided in the JSON, leave empty or add logic if needed
+    team_1_flag: "", // Not provided in the JSON
+    team_2_flag: "", // Not provided in the JSON
+    status: match.isLive ? "LIVE" : "UPCOMING",
+    category: match.event_category || "",
+    broadcast_channel: match.broadcast_channel || "",
 }));
 
 const matchesFromThirdJson = Array.from(
