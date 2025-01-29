@@ -63,7 +63,7 @@ const FT = () => {
           match_id: match.contentId,
           match_name: match.isLive ? match.match_name : match.event_name,
           banner: match.src || "",
-          stream_link: match.isLive ? match.pub_url : "",
+          stream_link: match.isLive ? match.dai_url : "",
           status: match.isLive ? "LIVE" : "UPCOMING",
           category: match.event_category || "",
           broadcast_channel: match.broadcast_channel || "",
