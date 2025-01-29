@@ -122,8 +122,8 @@ body{
   }
 
   .song img{
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 
   .song p {
@@ -131,7 +131,7 @@ body{
     font-size: 13px;
   }
   .player{
-    gap: 14px;
+    gap: 18px;
   }
 }
 .bt{
