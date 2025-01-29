@@ -67,6 +67,7 @@ const FT = () => {
           status: match.isLive ? "LIVE" : "UPCOMING",
           category: match.event_category || "",
           broadcast_channel: match.broadcast_channel || "",
+          
         }));
 
         const matchesFromSecondJson = data2.map((match) => ({
@@ -77,6 +78,7 @@ const FT = () => {
           stream_link:
             match.link === "URL not found" ? null : modifyUrl(match.link),
           status: match.status === "upcoming" ? "UPCOMING" : "LIVE",
+          hls:match.link;
         }));
 
         const matchesFromThirdJson = data3.matches.map((match) => ({
@@ -90,6 +92,7 @@ const FT = () => {
               ? "UPCOMING"
               : "LIVE",
           date: match.startTime,
+          hls:match.src;
         }));
 
         const matchesFromFourthJson = data4.matches.map((match) => ({
