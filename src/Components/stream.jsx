@@ -9,13 +9,13 @@ const FT = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const [response1, response2, response3, response4] = await Promise.all([
+        const [response1, response2, response3] = await Promise.all([
         // fetch('https://shadow-1205-hotstar.vercel.app/'), 
         //fetch('https://sony-eight.vercel.app/'),
           fetch("https://raw.githubusercontent.com/drmlive/sliv-live-events/main/sonyliv.json"),
           fetch("https://jiocinema-livid.vercel.app/"),
           fetch("https://fancode-two.vercel.app/"),
-          fetch("https://gxr.vercel.app/"),
+          //fetch("https://gxr.vercel.app/"),
         ]);
 
         if (!response1.ok ||!response2.ok ||!response3.ok ||!response4.ok) {throw new Error("Failed to fetch matches");}
@@ -23,7 +23,7 @@ const FT = () => {
         const data1 = await response1.json();
         const data2 = await response2.json();
         const data3 = await response3.json();
-        const data4 = await response4.json();
+        //const data4 = await response4.json();
 
          {/* const matchesFromHotstar = data1.matches
             .filter(match => match.m3u8_url) // Filter only live matches
@@ -94,7 +94,7 @@ const FT = () => {
           hls: match.src,
         }));
 
-        const matchesFromFourthJson = data4.matches.map((match) => {
+        /*const matchesFromFourthJson = data4.matches.map((match) => {
           const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
           const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
           return {
@@ -114,7 +114,7 @@ const FT = () => {
               clearkey_hex_key2: clearkeyParts[1] || null, // Second part after the colon
               clearkey_base64: match.clearkey_base64, // If using ClearKey for DRM            
           };
-      });
+      });*/
 
         // Combine matches with specified priority order
         const liveMatches = [
@@ -122,14 +122,14 @@ const FT = () => {
           ...matchesFromFirstJson.filter((m) => m.status === "LIVE"),
           ...matchesFromSecondJson.filter((m) => m.status === "LIVE"),
           ...matchesFromThirdJson.filter((m) => m.status === "LIVE"),
-          ...matchesFromFourthJson.filter((m) => m.status === "LIVE"),
+          //...matchesFromFourthJson.filter((m) => m.status === "LIVE"),
         ];
 
         const upcomingMatches = [
             //...matchesFromHotstar,
           ...matchesFromThirdJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromFirstJson.filter((m) => m.status === "UPCOMING"),
-          ...matchesFromFourthJson.filter((m) => m.status === "UPCOMING"),
+          //...matchesFromFourthJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromSecondJson.filter((m) => m.status === "UPCOMING"),
         ];
 
