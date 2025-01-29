@@ -98,7 +98,7 @@ const channels = [
 >
     <img src={channel.image} alt={channel.name} />
   </a>
-  <p>{channel.name}</p>
+{/*   <p>{channel.name}</p> */}
 </div>
           ))}
         </div>
