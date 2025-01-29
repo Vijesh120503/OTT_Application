@@ -13,7 +13,7 @@ const shows = [
         {name:'Kudumbasthan',image:'https://assetscdn1.paytm.com/images/cinema/Kudumbasthan-Poster-a4577dc0-d7e3-11ef-83bf-1dede4761f84.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kudumbasthan%20(2025)%5BTamil%20-%20V2%20HQ-Real%20PreDVDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20HQ%20Line%20Audio%5D.mkv'},
         {name:'Bottle Radha',image:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/14b98b211395965.672221259a2ca.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Bottle%20Radha%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB%20-%20HC-ESub.mkv'},
         {name:'Kathalikka Neramillai',image:'https://tse2.mm.bing.net/th?id=OIP.3A5tCwOyrjVTh1tjVpmd0QHaDt&pid=Api&P=0&h=220',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kadhalikka%20Neramillai%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
-        {name:'Nesippaya',image:'https://www.imdb.com/title/tt27190164/mediaviewer/rm1964602881/?ref_=tt_ov_i',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Family%20Padam%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
+        {name:'Nesippaya',image:'https://assets.voxcinemas.com/posters/P_HO00011878_1736421027452.jpgi',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Family%20Padam%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
     ],
   },
 
