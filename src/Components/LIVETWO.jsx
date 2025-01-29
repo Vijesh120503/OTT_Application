@@ -99,12 +99,6 @@ const channels = [
   </a>
   <p>{channel.name}</p>
 </div>
-
-
-
-
-
-
           ))}
         </div>
       </>
