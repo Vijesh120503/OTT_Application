@@ -12,7 +12,8 @@ const shows = [
         {name:'Mr.Housekeeping',image:'https://assetscdn1.paytm.com/images/cinema/Mr.HouseKeeping--Gallery-a0e7d350-aafd-11ef-8bec-85ca743197e0.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Mr%20House%20Keeping%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20MP3%20-%20700MB.mkv'},
         {name:'Kudumbasthan',image:'https://assetscdn1.paytm.com/images/cinema/Kudumbasthan-Poster-a4577dc0-d7e3-11ef-83bf-1dede4761f84.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kudumbasthan%20(2025)%5BTamil%20-%20V2%20HQ-Real%20PreDVDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20HQ%20Line%20Audio%5D.mkv'},
         {name:'Bottle Radha',image:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/14b98b211395965.672221259a2ca.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Bottle%20Radha%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB%20-%20HC-ESub.mkv'},
-       
+        {name:'Kathalikka Neramillai',image:'https://tse2.mm.bing.net/th?id=OIP.3A5tCwOyrjVTh1tjVpmd0QHaDt&pid=Api&P=0&h=220',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kadhalikka%20Neramillai%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
+        {name:'Nesippaya',image:'https://www.imdb.com/title/tt27190164/mediaviewer/rm1964602881/?ref_=tt_ov_i',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Family%20Padam%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
     ],
   },
 
@@ -23,7 +24,7 @@ const shows = [
         {name:'Vanangaan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/Vanangaan.mp4'},
         {name:'Madha Gaja Raja',image:'https://images.jdmagicbox.com/comp/jd_social/news/2018jul24/image-139962-cobm4nu9gq.jpg',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/Madha_Gaja_Raja.mp4'},
         {name:'Thiru Manickam',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGTCw5Ktxd-t70okCzWMUKEeUTQT_f4SXCuw&usqp=CAU',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/Thiru_Manickam.mp4'},
-        {name:"Alangu",image:'https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FvIGm5rPFd5mSnrzdrtKi7VoxpQj.jpg',link:'https://tsneh.vercel.app/pqwq91acw83q'},
+        {name:"Alangu",image:'https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FvIGm5rPFd5mSnrzdrtKi7VoxpQj.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Alangu%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
         {name:"The Smile Man",image:'https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fp8J4IroY8tzRrtEckuetnMKLc42.jpg',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/The_Smile_Man.mp4'},
         {name:'Viduthalai 2', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX7lrsHalT6c2XvmrNbOO3a3f0YFbKbpT5JEGyR1C00KhvdEShO9diMbw&s=10',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/Viduthalai_Part_2.mp4'}, 
        {name:'Miss You', image:'https://m.media-amazon.com/images/M/MV5BZjFlOTg1MDUtYTMwOS00MDBlLWE4ZjAtZjAzZWJjYzEyZWNjXkEyXkFqcGc@._V1_.jpg',link:'https://pub-c112d6c4191e458db7adfadb97398a27.r2.dev/Miss_You.mp4'}, 
