@@ -27,7 +27,7 @@ const MainApp = () => {
 
   useEffect(() => {
     if (location.pathname === '/') {
-      navigate('/home'); // Default route
+      navigate('/Home'); // Default route
     } else if (location.pathname === '/Albums') {
       window.location.href = 'https://shadow-music.netlify.app/'; // Open in the same page
     }
@@ -79,13 +79,13 @@ const MainApp = () => {
             )}
           </>
         } />
-        <Route path="/vlc" element={<Livetwo />} />
+        <Route path="/TV" element={<Livetwo />} />
         <Route path="/Movies" element={<Movies />} />
         <Route path="/Shows" element={<Shows />} />
         <Route path="/Kids" element={<Kids />} />
         <Route path="/Series" element={<Series />} />
         <Route path="/Video-Songs" element={<Video />} />
-        <Route path="/stream" element={<Stream />} />
+        <Route path="/Sports" element={<Stream />} />
       </Routes>
     </div>
   );
