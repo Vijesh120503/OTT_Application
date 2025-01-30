@@ -69,16 +69,20 @@ const FT = () => {
           broadcast_channel: match.broadcast_channel || "",
         }));
 
-        const matchesFromSecondJson = data2.map((match) => ({
-          match_id: match.id,
-          match_name:
-            match.status === "upcoming" ? "Upcoming" : match.title,
-          banner: match.logo,
-          stream_link:
-            match.link === "URL not found" ? null : modifyUrl(match.link),
-          status: match.status === "upcoming" ? "UPCOMING" : "LIVE",
-          hls:match.logo,
-        }));
+      const matchesFromSecondJson = Array.from(
+          new Map(
+              data2.map((match) => [
+                  match.id || 'unknown', // Use `match.id` or 'unknown' as the unique key
+                  {
+                      match_id: match.id || 'unknown',
+                      match_name: match.title || 'Unnamed Match',
+                      banner: match.logo || '',
+                      stream_link:match.link === 'URL not found' ? 'https%3A%2F%2Fottb.live.cf.ww.aiv-cdn.net%2Flhr-nitro%2Flive%2Fclients%2Fdash%2Fenc%2Fwf8usag51e%2Fout%2Fv1%2Fbd3b0c314fff4bb1ab4693358f3cd2d3%2Fcenc.mpd&keyid=ae26845bd33038a9c0774a0981007294&key=63ac662dde310cfb4cc6f9b43b34196d&cookie=&userAgent=' : modifyUrl(match.link),
+                      hls: match.logo,
+                  }
+              ])
+          ).values() // Extract only the values (unique matches)
+      );
 
         const matchesFromThirdJson = data3.matches.map((match) => ({
           match_id: match.match_id,
