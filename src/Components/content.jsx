@@ -2,9 +2,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './live.css';
 const stream = [
-//{name:'BRH vs SYS',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkaNjFqHKLIoqmOhx8KSXXG69AhjEngPkNZHCBjqrXRUa67hy8CHLMW1dA&s=10',link:''},
+//{name:'BRH vs SYS',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkaNjFqHKLIoqmOhx8KSXXG69AhjEngPkNZHCBjqrXRUa67hy8CHLMW1dA&s=10',link:'https://s.bdixtv24.com/sportstv.php?c=skyscric'},
 // {name:'2nd T20',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7822/1737535877822-h',link:'https://tsneh.vercel.app/tnt1-shadow'},
-  {name:'JSK vs PR',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_2048/sources/r1/cms/prod/532/1735025930532-a',link:'https://s.bdixtv24.com/sportstv.php?c=skyscric'},
+  {name:'JSK vs PR',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_2048/sources/r1/cms/prod/532/1735025930532-a',link:'https://tapmadtv.live/play.php?c=willowusa'},
  // {name:'AUSW vs ENGW',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/75/1738148190075-h',link:'https://tsneh.vercel.app/tnt1-shadow'},
 //https://darshan.glitch.me/play.html?manifest=https%3A%2F%2Famg01269-amg01269c1-willowtv-us-5479.playouts.now.amagi.tv%2Fplaylist%2Famg01269-willowtvfast-willowplus-willowtvus%2Fplaylist.m3u8&drmToggle=false&drmType=clearkey&keyId=&key=&licenseUrl=
   ];
