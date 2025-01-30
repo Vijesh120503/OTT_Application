@@ -81,6 +81,7 @@ const matchesFromSecondJson = Array.from(
                     ? 'https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd&keyid=ae26845bd33038a9c0774a0981007294&key=63ac662dde310cfb4cc6f9b43b34196d&cookie=&userAgent=' 
                     : modifyUrl(match.link), // Use `modifyUrl` for valid `match.link`
                 hls: match.logo || '',  // Assuming `match.hls` should be used for HLS data
+               status: "LIVE",
             }
         ])
     ).values() // Extract only the values (unique matches)
