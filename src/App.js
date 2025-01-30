@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './Components/navbar';
 import Home from './Components/content';
 import Movies from './Components/movies';
@@ -10,20 +11,35 @@ import Video from './Components/video';
 import Stream from './Components/stream';
 
 const App = () => {
-  const [activeComponent, setActiveComponent] = useState('home');
+  return (
+    <Router>
+      <MainApp />
+    </Router>
+  );
+};
+
+const MainApp = () => {
   const [currentSong, setCurrentSong] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentAudio, setCurrentAudio] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      navigate('/home'); // Default route
+    } else if (location.pathname === '/Albums') {
+      window.location.href = 'https://shadow-music.netlify.app/'; // Open in the same page
+    }
+  }, [location, navigate]);
 
   const handleNavClick = (component) => {
-    setActiveComponent(component);
-    window.history.pushState({ activeComponent: component }, '');
-  
     if (component === 'Albums') {
-      window.location.href = 'https://shadow-music.netlify.app/'; // Opens in the same tab
+      window.location.href = 'https://shadow-music.netlify.app/';
+    } else {
+      navigate(`/${component}`);
     }
   };
-  
 
   const handleSongChange = (song) => {
     setCurrentSong(song);
@@ -41,46 +57,36 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    const handlePopState = (event) => {
-      if (event.state?.activeComponent) {
-        setActiveComponent(event.state.activeComponent);
-      }
-    };
-
-    window.addEventListener('popstate', handlePopState);
-
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-
   return (
     <div>
       <Navbar onNavClick={handleNavClick} />
-      {activeComponent === 'home' && (
-        <>
-          <Home 
-            onNavClick={handleNavClick} 
-            onSongChange={handleSongChange} 
-            onAudioChange={handleAudioChange} 
-          />
-          {currentSong && currentSong.image && (
-            <div className="songg">
-              <h3>Now Playing</h3>
-              <img src={currentSong.image} alt={currentSong.name} /><br />
-              <button onClick={togglePlayPause} className="player-button">
-                {isPlaying ? 'Pause' : 'Play'}
-              </button>
-            </div>
-          )}
-        </>
-      )}
-      {activeComponent === 'vlc' && <Livetwo />}
-      {activeComponent === 'Movies' && <Movies />}
-      {activeComponent === 'Shows' && <Shows />}
-      {activeComponent === 'Kids' && <Kids />}
-      {activeComponent === 'Series' && <Series />}
-      {activeComponent === 'Vid' && <Video />}
-      {activeComponent === 'stream' && <Stream />}
+      <Routes>
+        <Route path="/home" element={
+          <>
+            <Home 
+              onNavClick={handleNavClick} 
+              onSongChange={handleSongChange} 
+              onAudioChange={handleAudioChange} 
+            />
+            {currentSong && currentSong.image && (
+              <div className="songg">
+                <h3>Now Playing</h3>
+                <img src={currentSong.image} alt={currentSong.name} /><br />
+                <button onClick={togglePlayPause} className="player-button">
+                  {isPlaying ? 'Pause' : 'Play'}
+                </button>
+              </div>
+            )}
+          </>
+        } />
+        <Route path="/vlc" element={<Livetwo />} />
+        <Route path="/Movies" element={<Movies />} />
+        <Route path="/Shows" element={<Shows />} />
+        <Route path="/Kids" element={<Kids />} />
+        <Route path="/Series" element={<Series />} />
+        <Route path="/Video-Songs" element={<Video />} />
+        <Route path="/stream" element={<Stream />} />
+      </Routes>
     </div>
   );
 };
