@@ -339,7 +339,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
  
            <div className="bt flex">
           <h1 className='sideheading'>Live Events</h1>
-             <button onClick={() => onNavClick('stream')} className='btt'>See All</button>
+             <button onClick={() => onNavClick('Sports')} className='btt'>See All</button>
           </div>
          <div id='stream-player' className='player'></div>
         <div id='sports-player' className='player'></div>
@@ -363,7 +363,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
           
           {/*<div className="bt">
               <h1 className='sideheading'>Live Tv</h1>
-            <button onClick={() => onNavClick('vlc')} className='btt'>See All</button>
+            <button onClick={() => onNavClick('TV')} className='btt'>See All</button>
           </div>
           <div id='live-player' className='player'></div>*/}
 
