@@ -47,8 +47,8 @@ const SideNav = ({ onNavClick }) => {
   return (
     <div className='side-nav'>
       <ul>
-        <li onClick={() => onNavClick('home')}>Home</li>
-        <li onClick={() => onNavClick('vlc')}>Live TV</li>
+        <li onClick={() => onNavClick('Home')}>Home</li>
+        <li onClick={() => onNavClick('TV')}>Live TV</li>
         {/* <li onClick={() => onNavClick('vlc')}>Live TV</li>*/}
 
         <li onClick={() => onNavClick('Movies')}>Movies</li>
@@ -56,8 +56,8 @@ const SideNav = ({ onNavClick }) => {
         <li onClick={() => onNavClick('Kids')}>Kids</li> */}
         <li onClick={() => onNavClick('Albums')}>Songs</li>
        <li onClick={() => onNavClick('Series')}>Series</li>
-        <li onClick={() => onNavClick('Vid')}>Video Songs</li>
-        <li onClick={() => onNavClick('stream')}>Sports</li>
+        <li onClick={() => onNavClick('Video-Songs')}>Video Songs</li>
+        <li onClick={() => onNavClick('Sports')}>Sports</li>
       </ul>
     </div>
   );
