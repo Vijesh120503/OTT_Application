@@ -9,13 +9,13 @@ const FT = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const [response1, response2, response3] = await Promise.all([
-        // fetch('https://shadow-1205-hotstar.vercel.app/'), 
+        const [response1, response2, response3,response4,response5] = await Promise.all([
         //fetch('https://sony-eight.vercel.app/'),
           fetch("https://raw.githubusercontent.com/drmlive/sliv-live-events/main/sonyliv.json"),
           fetch("https://jiocinema-livid.vercel.app/"),
           fetch("https://fancode-two.vercel.app/"),
-          //fetch("https://gxr.vercel.app/"),
+          fetch("https://gxr.vercel.app/"),
+          fetch("https://cric-aus.vercel.app/")
         ]);
 
         if (!response1.ok ||!response2.ok ||!response3.ok) {throw new Error("Failed to fetch matches");}
@@ -23,18 +23,9 @@ const FT = () => {
         const data1 = await response1.json();
         const data2 = await response2.json();
         const data3 = await response3.json();
-        //const data4 = await response4.json();
+        const data4 = await response4.json();
+        const data5 = await response5.json();
 
-         {/* const matchesFromHotstar = data1.matches
-            .filter(match => match.m3u8_url) // Filter only live matches
-             .map((match) => ({
-                 match_id: match.match_id || 'unknown',
-                 match_name: match.title || 'Unnamed Match',
-                banner: match.image_urls?.['4k'] || "",
-               stream_link: match.m3u8_url || null,
-                 status: match.status === 'upcoming' ? "UPCOMING" : "LIVE",
-              
-            })); */}
 
                 // Normalize the match data for each JSON
             {/*const matchesFromFirstJson = data1.matches.map((match) => ({
@@ -102,7 +93,7 @@ const matchesFromSecondJson = Array.from(
           hls: match.src,
         }));
 
-        /*const matchesFromFourthJson = data4.matches.map((match) => {
+        const matchesFromFourthJson = data4.matches.map((match) => {
           const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
           const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
           return {
@@ -122,7 +113,27 @@ const matchesFromSecondJson = Array.from(
               clearkey_hex_key2: clearkeyParts[1] || null, // Second part after the colon
               clearkey_base64: match.clearkey_base64, // If using ClearKey for DRM            
           };
-      });*/
+      });
+
+      const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
+        console.log("Fixture:", fixture);
+        return fixture.streams
+          .filter((stream) => {
+            console.log("Stream Name:", stream.streamName);
+            return stream.streamName?.toLowerCase().includes("cricket");
+          })
+          .map((stream) => ({
+            match_id: fixture.fixtureId,
+            match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
+            banner: fixture.competitionImageUrl,
+            stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
+            status: stream.status === "UPCOMING" ? "UPCOMING" : "LIVE",
+            date: stream.startTime,
+            hls: fixture.competitionImageUrl,
+          }));
+      });
+      
+      
 
         // Combine matches with specified priority order
         const liveMatches = [
@@ -130,15 +141,17 @@ const matchesFromSecondJson = Array.from(
           ...matchesFromFirstJson.filter((m) => m.status === "LIVE"),
           ...matchesFromSecondJson.filter((m) => m.status === "LIVE"),
           ...matchesFromThirdJson.filter((m) => m.status === "LIVE"),
-          //...matchesFromFourthJson.filter((m) => m.status === "LIVE"),
+          ...matchesFromFourthJson.filter((m) => m.status === "LIVE"),
+          ...matchesFromFifthJson.filter((m) => m.status === "LIVE"),
         ];
 
         const upcomingMatches = [
             //...matchesFromHotstar,
           ...matchesFromThirdJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromFirstJson.filter((m) => m.status === "UPCOMING"),
-          //...matchesFromFourthJson.filter((m) => m.status === "UPCOMING"),
+          ...matchesFromFourthJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromSecondJson.filter((m) => m.status === "UPCOMING"),
+          ...matchesFromFifthJson.filter((m) => m.status === "UPCOMING"),
         ];
 
         const allMatches = [...liveMatches, ...upcomingMatches];
