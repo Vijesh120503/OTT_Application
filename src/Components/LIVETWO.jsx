@@ -6,7 +6,7 @@ import './album.css';
 const channels = [
 
   {
-    name:'Entertainment',image:'https://files.oaiusercontent.com/file-3KGTT4YQYCMKz72aHb9CGN?se=2025-02-01T07%3A01%3A02Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da6d72093-6350-4e2e-89d4-dd68fd7f748e.webp&sig=YrrrT1n0MoDxmbz9bX9/VDw/WCbMc62zcM8okH/uDKE%3D',shows:[ 
+    name:'Entertainment',image:'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-01%2013.03.25%20-%20A%20black%20pitbull%20dog%20with%20a%20white%20chest%20and%20one%20side%20of%20its%20face%20white%2C%20looking%20entertained%20and%20happy.%20The%20dog%20is%20wearing%20a%20stylish%20gold%20chain%20while%20en.webp',shows:[ 
         
   //{ name: 'Vijay Takkar', image: 'https://news.indiantvinfo.com/media/2022/09/Logo-of-Vijay-Takkar-Channel-300x300.png', link: 'https://stream.vstartv.org:3511/hybrid/play.m3u8' },
 // { name: 'SS Tamil', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQop8ucdt1JVIfgEzRt4K8A6AoRZ-DfftdXvSBfE2Pm8IBKBfA9Jwo61Es4&s=10',link:'albaniaserver.com/play/live.php?mac=00:1A:79:5C:C1:11&stream=441095&extension=ts&play_token=zr3DwTDkQA'},
@@ -41,7 +41,7 @@ const channels = [
   },
 
   {
-    name:'News',image:'https://files.oaiusercontent.com/file-4zq8wt8mo9H4fJgex1wvj9?se=2025-02-01T07%3A01%3A51Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D0684f706-7743-430b-a903-9ec6a071d5e5.webp&sig=oGuyVi/Azh6%2Blko7v6OiTiyljPXZvZsq3kVq5AUSjlg%3D',shows:[
+    name:'News',image:'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-01%2013.03.30%20-%20A%20black%20pitbull%20dog%20with%20a%20white%20chest%20and%20one%20side%20of%20its%20face%20white%2C%20wearing%20stylish%20glasses%20and%20reading%20a%20newspaper.%20The%20dog%20looks%20focused%20and%20inte.webp',shows:[
   { name: 'SUN News', image: 'https://seeklogo.com/images/S/sun-news-logo-107E32491A-seeklogo.com.png', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fdeadpooll.fun%2Flive.php%3Fid%3D676%26key%3DJITENDRAUNATTI%26e%3D.m3u8&keyid=&key=&cookie=&userAgent=' },
   { name: 'K Seithigal', image: 'https://media.assettype.com/kalaignarseithigal/2019-04/273604e9-3c45-44a4-9866-9584c01fddbd/NEWS_01.png?w=1200&auto=format%2Ccompress&ogImage=true', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fdeadpooll.fun%2Flive.php%3Fid%3D1210%26key%3DJITENDRAUNATTI%26e%3D.m3u8&keyid=&key=&cookie=&userAgent=' },
     { name: 'Pithiyathalaimurai', image: 'https://gumlet.assettype.com/puthiyathalaimurai/2023-03/8b38e0a5-3ce7-4d9a-9768-0be50a980f42/16_9.png?w=1200&auto=format%2Ccompress&ogImage=true&enlarge=true', link: 'https://shadowplayer.netlify.app/?manifest=https://segment.yuppcdn.net/240122/puthiya/playlist.m3u8' },
@@ -53,7 +53,7 @@ const channels = [
     ],},
 
   {
-    name:'Infotainment',image:'https://files.oaiusercontent.com/file-V6t1xJWA72JMBxeuYJ6kWc?se=2025-02-01T07%3A09%3A43Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D23ca8c18-8801-4712-b3d3-cf94733d8b77.webp&sig=PlIP6baZ6x7g5bEKXpIBfqeG5sJyKYtkM07i4ORa3%2Bk%3D',shows:[
+    name:'Infotainment',image:'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-01%2013.02.17%20-%20A%20black%20pitbull%20dog%20with%20a%20white%20chest%20and%20one%20side%20of%20its%20face%20white%2C%20engaged%20in%20an%20infotainment%20setting.%20The%20dog%20is%20sitting%20attentively%20in%20front%20of%20.webp',shows:[
       //  { name: 'National Geographic HD', image: 'https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12234-j9qoqc54-v1/imageContent-12234-j9qoqc54-m1.png', link: 'https://allinonereborn.com/tatatv.php?id=44357' },
       //  { name: 'Nat Geo Wild HD', image: 'https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-11631-j9k0ndjc-v1/imageContent-11631-j9k0ndjc-m1.png', link: 'https://allinonereborn.com/tatatv.php?id=743' },
     { name: 'Discovery HD', image: 'https://wikiwandv2-19431.kxcdn.com/_next/image?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Discovery_tamil_logo.png/640px-Discovery_tamil_logo.png&w=640&q=50', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fdeadpooll.fun%2Flive.php%3Fid%3D569%26key%3DJITENDRAUNATTI%26e%3D.m3u8&keyid=&key=&cookie=&userAgent=' },
@@ -64,7 +64,7 @@ const channels = [
     ],
   },
 
-  {name:'Sports',image:'https://files.oaiusercontent.com/file-VagxbZiyCGiwJ3vGTgq1wL?se=2025-02-01T07%3A10%3A15Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df4c11ecc-d412-4343-8ece-4d254d96b7e7.webp&sig=g7kPtPDieEk3n8XC0uTg/QFyu4RLjrNi7L284GQqyrY%3D',shows:[
+  {name:'Sports',image:'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-01%2013.02.24%20-%20A%20black%20pitbull%20dog%20with%20a%20white%20chest%20and%20one%20side%20of%20its%20face%20white%2C%20actively%20playing%20sports.%20The%20dog%20is%20running%20on%20a%20grassy%20field%2C%20energetically%20ch.webp',shows:[
      //{ name: 'Star Sports 1 HD', image: 'https://vignette1.wikia.nocookie.net/logopedia/images/e/e8/STAR_Sports_1_logo.png/revision/latest?cb=20150719162710', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Flive-proxy.vercel.app%2Fcors%3Furl%3Dhttps%3A%2F%2Fcrichd.onlinetvbd.com%2Fm3u8.php%2Fstar1in.m3u8&keyid=&key=&cookie=&userAgent=' },
     //{name:'Star Sports Hindi',image:'https://assets.airtel.in/static-assets/cms/dth/images/channellogo/Star-Sports-1-Hindi.png',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fcors.8088yyy.workers.dev%2F%3Fu%3Dhttps%3A%2F%2Fcrichd.onlinetvbd.com%2Fm3u8.php%2Fstarhindi.m3u8&keyid=&key=&cookie=&userAgent='}, 
     // { name: 'Star Sports 2 HD', image: 'https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-1021-j5nj3c68-v1/imageContent-1021-j5nj3c68-m1.png', link: 'https://allinonereborn.com/tatatv.php?id=12150' },
