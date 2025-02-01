@@ -173,10 +173,10 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
                 match_id: match.contentId || "unknown",
                 match_name: match.episodeTitle || "Unnamed Match",
                 banner: match.portraitThumb || "",
-                stream_link: match.portraitThumb.includes("tam_tel")
+                stream_link: match.portraitThumb.includes("multilang")
         ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
-        : match.title.startsWith("WWE") || match.title.startsWith("HOCKEY")
-        ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
+        // : match.title.startsWith("WWE") || match.title.startsWith("HOCKEY")
+        // ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
         : match.pub_url,
   
             }));
