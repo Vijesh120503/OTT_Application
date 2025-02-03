@@ -114,33 +114,31 @@ const Movies = () => {
         
     ],},
 
-    {name:'Sony Channels',image:'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2013.45.02%20-%20A%20black%20pitbull%20with%20a%20half-white%20face%20and%20a%20white%20chest%2C%20sitting%20confidently%20while%20holding%20a%20badge%20with%20the%20word%20'Sony'%20on%20it.%20The%20background%20is%20a%20si.webp',shows:[
-  {name: "SONY HD", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/sony.m3u8"},
-  {name: "SONY SAB HD", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_SAB_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/sab.m3u8"},
-  {name: "SONY KAL", logo: "https://i.postimg.cc/ZqnmcXdx/Sony-KAL.png", link: "https://spt-sonykal-1-us.lg.wurl.tv/playlist.m3u8"},
-  {name: "SONY PAL", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Pal.png", link: "https://live.drmlive-02.workers.dev/sliv/pal.m3u8"},
-  {name: "SONY WAH", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Wah.png", link: "https://live.drmlive-02.workers.dev/sliv/wah.m3u8"},
-  {name: "SONY MAX", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/SET_MAX.png", link: "https://live.drmlive-02.workers.dev/sliv/max.m3u8"},
-  {name: "SONY MAX HD", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Max_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/maxhd.m3u8"},
-  {name: "SONY MAX2", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_MAX2.png", link: "https://live.drmlive-02.workers.dev/sliv/max2.m3u8"},
-  {name: "SONY TEN 1", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_1.png", link: "https://live.drmlive-02.workers.dev/sliv/ten1.m3u8"},
-  {name: "SONY TEN 2", logo: "https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_2.png", link: "https://live.drmlive-02.workers.dev/sliv/ten2.m3u8"},
-  {name: "SONY TEN 3", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_3.png", link: "https://live.drmlive-02.workers.dev/sliv/ten3.m3u8"},
-  {name: "SONY TEN 4", logo: "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_SD_Logo_CLR.png", link: "https://live.drmlive-02.workers.dev/sliv/ten4.m3u8"},
-  {name: "SONY TEN 5", logo: "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_SD_Logo_CLR.png", link: "https://live.drmlive-02.workers.dev/sliv/ten5.m3u8"},
-  {name: "SONY TEN 1 HD", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/ten1hd.m3u8"},
-  {name: "SONY TEN 2 HD", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten2_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/ten2hd.m3u8"},
-  {name: "SONY TEN 3 HD", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten3_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/ten3hd.m3u8"},
-  {name: "SONY TEN 4 HD", logo: "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_HD_Logo_CLR.png", link: "https://live.drmlive-02.workers.dev/sliv/ten4hd.m3u8"},
-  {name: "SONY TEN 5 HD", logo: "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png", link: "https://live.drmlive-02.workers.dev/sliv/ten5hd.m3u8"},
-  {name: "SONY BBC EARTH", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_BBC_Earth_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/bbc.m3u8"},
-  {name: "SONY YAY", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Yay_Hindi.png", link: "https://live.drmlive-02.workers.dev/sliv/yay.m3u8"},
-  {name: "SONY PIX HD", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Pix_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/pix.m3u8"},
-  {name: "SONY MARATHI", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Marathi_SD.png", link: "https://live.drmlive-02.workers.dev/sliv/marathi.m3u8"},
-  {name: "SONY AATH", logo: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_aath.png", link: "https://live.drmlive-02.workers.dev/sliv/aath.m3u8"}
-]
-
-      
+    {name:'Sony Channels',image:'https://github.com/vijesh0512/image/blob/main/v.png?raw=true',shows:[
+  {name: "SONY HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/sony.m3u8"},
+  {name: "SONY SAB HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_SAB_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/sab.m3u8"},
+  {name: "SONY KAL", image: "https://i.postimg.cc/ZqnmcXdx/Sony-KAL.png", link: "https://spt-sonykal-1-us.lg.wurl.tv/playlist.m3u8"},
+  {name: "SONY PAL", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Pal.png", link: "https://live.drmlive-02.workers.dev/sliv/pal.m3u8"},
+  {name: "SONY WAH", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Wah.png", link: "https://live.drmlive-02.workers.dev/sliv/wah.m3u8"},
+  {name: "SONY MAX", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/SET_MAX.png", link: "https://live.drmlive-02.workers.dev/sliv/max.m3u8"},
+  {name: "SONY MAX HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Max_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/maxhd.m3u8"},
+  {name: "SONY MAX2", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_MAX2.png", link: "https://live.drmlive-02.workers.dev/sliv/max2.m3u8"},
+  {name: "SONY TEN 1", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_1.png", link: "https://live.drmlive-02.workers.dev/sliv/ten1.m3u8"},
+  {name: "SONY TEN 2", image: "https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_2.png", link: "https://live.drmlive-02.workers.dev/sliv/ten2.m3u8"},
+  {name: "SONY TEN 3", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_3.png", link: "https://live.drmlive-02.workers.dev/sliv/ten3.m3u8"},
+  {name: "SONY TEN 4", image: "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_SD_Logo_CLR.png", link: "https://live.drmlive-02.workers.dev/sliv/ten4.m3u8"},
+  {name: "SONY TEN 5", image: "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_SD_Logo_CLR.png", link: "https://live.drmlive-02.workers.dev/sliv/ten5.m3u8"},
+  {name: "SONY TEN 1 HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/ten1hd.m3u8"},
+  {name: "SONY TEN 2 HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten2_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/ten2hd.m3u8"},
+  {name: "SONY TEN 3 HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten3_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/ten3hd.m3u8"},
+  {name: "SONY TEN 4 HD", image: "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_HD_Logo_CLR.png", link: "https://live.drmlive-02.workers.dev/sliv/ten4hd.m3u8"},
+  {name: "SONY TEN 5 HD", image: "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png", link: "https://live.drmlive-02.workers.dev/sliv/ten5hd.m3u8"},
+  {name: "SONY BBC EARTH", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_BBC_Earth_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/bbc.m3u8"},
+  {name: "SONY YAY", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Yay_Hindi.png", link: "https://live.drmlive-02.workers.dev/sliv/yay.m3u8"},
+  {name: "SONY PIX HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Pix_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/pix.m3u8"},
+  {name: "SONY MARATHI", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Marathi_SD.png", link: "https://live.drmlive-02.workers.dev/sliv/marathi.m3u8"},
+  {name: "SONY AATH", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_aath.png", link: "https://live.drmlive-02.workers.dev/sliv/aath.m3u8"}
+],  
     },
   ];
 
@@ -148,25 +146,18 @@ const Movies = () => {
   useEffect(() => {
     async function fetchChannels() {
       try {
-        const response1 = await fetch("https://shadow-tam-loc.vercel.app/");
-        const response2 = await fetch("https://jio-shadow-cin.vercel.app/");
-       
-        const data1 = await response1.json();
-        const data2 = await response2.json();
-
-    
-
-    
+        const data1 = ("https://shadow-tam-loc.vercel.app/");
+        const data2 = ("https://jio-shadow-cin.vercel.app/");
+        // const data1 = await response1.json();
+        // const data2 = await response2.json();
         if (
-          response1.ok &&
-          response2.ok &&
 
           data1.channels &&
           Array.isArray(data1.channels) &&
           data2.channels &&
-          Array.isArray(data2.channels) &&
+          Array.isArray(data2.channels)
 
-        ) {
+        ){
           const modifiedChannels = Array.from(
             new Map(
               data1.channels.map((channel) => [
@@ -197,7 +188,7 @@ const Movies = () => {
 
           setAllChannels([
             ...predefinedChannels,
-                        {
+            {
               name: "Jio Channels",
               image:
                 "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2013.44.42%20-%20A%20black%20pitbull%20with%20a%20half-white%20face%20and%20a%20white%20chest%2C%20sitting%20confidently%20while%20holding%20a%20badge%20with%20the%20text%20'JioCinema'%20on%20it.%20The%20background%20is.webp",
