@@ -152,8 +152,8 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             fetch('https://sony-eight.vercel.app/'),
             fetch('https://jiocinema-livid.vercel.app/'),
             fetch('https://fancode-two.vercel.app/'),
-            // fetch('https://gxr.vercel.app/'), // New API
-            // fetch('https://cric-aus.vercel.app/'),
+             fetch('https://gxr.vercel.app/'), // New API
+             fetch('https://cric-aus.vercel.app/'),
         ]);
         
         if (!response1.ok || !response2.ok || !response3.ok ) {
@@ -227,44 +227,42 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             }));
 
         // Normalize data from the fourth JSON (with ClearKey DRM handling)
-//       const matchesFromFourthJson = data4.matches
-//         .filter((match) => match.current_state==='live') // Filter only live matches
-//         .map((match) => {
-//             const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
-//             const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
+       const matchesFromFourthJson = data4.matches
+        .filter((match) => match.current_state==='live') // Filter only live matches
+/        .map((match) => {
+             const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
+            const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
     
-//             return {
-//                 match_id: match.game_id || 'unknown',
-//                 match_name: match.title || 'Unnamed Match',
-//                 banner: match.image_url || '',
-//                 stream_link: cleanedStreamLink, // Livestream URL for live matches
-//                 clearkey_hex_key1: clearkeyParts[0] || null, // First part before the colon
-//                 clearkey_hex_key2: clearkeyParts[1] || null, // Second part after the colon
-//                 lic_url: match.lic_url, // Licensing URL for DRM content
-//                 lic_token: match.lic_token, // DRM token for secure streaming
-//             };
-//         });
+             return {
+              match_id: match.game_id || 'unknown',
+                match_name: match.title || 'Unnamed Match',
+                banner: match.image_url || '',
+                stream_link: cleanedStreamLink, // Livestream URL for live matches                 clearkey_hex_key1: clearkeyParts[0] || null, // First part before the colon
+                 clearkey_hex_key2: clearkeyParts[1] || null, // Second part after the
+                 lic_url: match.lic_url, // Licensing URL for DRM content
+                 lic_token: match.lic_token, // DRM token for secure streaming
+             };
+         });
 
-//        const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
-//   return fixture.streams
-//     .filter((stream) => {
-//       // Ensure streamName exists before calling toLowerCase()
-//       const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
-//       const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE";
-//       return containsCricket && isUpcomingOrLive;
-//     })
-//     .map((stream) => {
-//       return {
-//         match_id: fixture.fixtureId,
-//         match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
-//         banner: fixture.competitionImageUrl,
-//         stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
-//         status: stream.status, // Keep original status, excluding "Match Completed"
-//         date: stream.startTime,
-//         hls: fixture.competitionImageUrl, // Ensure correct HLS URL usage
-//       };
-//     });
-// });
+        const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
+         return fixture.streams
+     .filter((stream) => 
+       // Ensure streamName exists before calling toLowerCase()/       const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
+       const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE";
+       return containsCricket && isUpcomingOrLive;
+     })
+    .map((stream) => {
+       return {
+           match_id: fixture.fixtureId,
+         match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
+         banner: fixture.competitionImageUrl,
+         stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
+         status: stream.status, // Keep original status, excluding "Match Completed"
+        date: stream.startTime,
+         hls: fixture.competitionImageUrl, // Ensure correct HLS URL usage
+       };
+     });
+ });
 
     
         
@@ -278,8 +276,8 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             ...matchesFromFirstJson,
             ...matchesFromSecondJson,
             ...matchesFromThirdJson,
-          // ...matchesFromFourthJson,
-          // ...matchesFromFifthJson, // Include fourth JSON data
+           ...matchesFromFourthJson,
+         ...matchesFromFifthJson, // Include fourth JSON data
         ];
 
         container.innerHTML = '';
