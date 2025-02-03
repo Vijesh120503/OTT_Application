@@ -148,7 +148,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
     if (!container) return;
     container.innerHTML = '<p style="color: white;">Loading matches...</p>';
     try {
-        const [response1, response2, response3] = await Promise.all([
+        const [response1, response2, response3, response4, response5] = await Promise.all([
             fetch('https://sony-eight.vercel.app/'),
             fetch('https://jiocinema-livid.vercel.app/'),
             fetch('https://fancode-two.vercel.app/'),
@@ -163,8 +163,8 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
         const data1 = await response1.json();
         const data2 = await response2.json();
         const data3 = await response3.json();
-       // const data4 = await response4.json(); // New API data
-       // const data5 = await response5.json();
+       const data4 = await response4.json(); // New API data
+        const data5 = await response5.json();
 
         // Normalize and filter live matches for the first JSON
         const matchesFromFirstJson = data1.matches
