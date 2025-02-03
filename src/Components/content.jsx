@@ -246,26 +246,26 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
             };
         });
 
-        const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
-          return fixture.streams
-            .filter((stream) => {
-              // Ensure streamName exists before calling toLowerCase()
-              const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
-              const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE" || stream.status === "Match Completed";
-              return containsCricket && isUpcomingOrLive;
-            })
-            .map((stream) => {
-              return {
-                match_id: fixture.fixtureId,
-                match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
-                banner: fixture.competitionImageUrl,
-                stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
-                status: stream.status, // Keep original status, including "Match Completed"
-                date: stream.startTime,
-                hls: fixture.competitionImageUrl, // Ensure correct HLS URL usage
-              };
-            });
-        });
+       const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
+        return fixture.streams
+          .filter((stream) => {
+            // Ensure streamName exists before calling toLowerCase()
+            const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
+            const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE" || stream.status === "Match Completed";
+            return containsCricket && isUpcomingOrLive;
+          })
+          .map((stream) => {
+            return {
+              match_id: fixture.fixtureId,
+              match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
+              banner: fixture.competitionImageUrl,
+              stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
+              status: stream.status, // Keep original status, including "Match Completed"
+              date: stream.startTime,
+              hls: fixture.competitionImageUrl, // Ensure correct HLS URL usage
+            };
+          });
+      });
         
         console.log("matchesFromFourthJson:", matchesFromFourthJson);
         
