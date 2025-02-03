@@ -9,13 +9,13 @@ const FT = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const [response1, response2, response3,response4,response5] = await Promise.all([
+        const [response1, response2, response3] = await Promise.all([
         //fetch('https://sony-eight.vercel.app/'),
           fetch("https://raw.githubusercontent.com/drmlive/sliv-live-events/main/sonyliv.json"),
           fetch("https://jiocinema-livid.vercel.app/"),
           fetch("https://fancode-two.vercel.app/"),
-          fetch("https://gxr.vercel.app/"),
-          fetch("https://cric-aus.vercel.app/")
+          // fetch("https://gxr.vercel.app/"),
+          // fetch("https://cric-aus.vercel.app/")
         ]);
 
         if (!response1.ok ||!response2.ok ||!response3.ok) {throw new Error("Failed to fetch matches");}
@@ -23,8 +23,8 @@ const FT = () => {
         const data1 = await response1.json();
         const data2 = await response2.json();
         const data3 = await response3.json();
-        const data4 = await response4.json();
-        const data5 = await response5.json();
+        // const data4 = await response4.json();
+        // const data5 = await response5.json();
 
 
                 // Normalize the match data for each JSON
@@ -93,48 +93,48 @@ const matchesFromSecondJson = Array.from(
           hls: match.src,
         }));
 
-        const matchesFromFourthJson = data4.matches.map((match) => {
-          const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
-          const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
-          return {
-              match_id: match.game_id,
-              match_name: match.title,
-              banner: match.image_url,
-              stream_link: match.current_state === "live" ? cleanedStreamLink : null, // Livestream URL for live matches
-              lic_url: match.lic_url, // Licensing URL for DRM content
-              lic_token: match.lic_token, // DRM token for secure streaming
-            team_1: match.home_team,
-              team_2: match.away_team,
-            broadcaster: match.broadcaster,
-              status: match.current_state === "live" ? "LIVE" : "UPCOMING",
-              date: match.start_time.indian_time,
-             end_time: match.end_time.indian_time,
-              clearkey_hex_key1: clearkeyParts[0] || null, // First part before the colon
-              clearkey_hex_key2: clearkeyParts[1] || null, // Second part after the colon
-              clearkey_base64: match.clearkey_base64, // If using ClearKey for DRM            
-          };
-      });
+      //   const matchesFromFourthJson = data4.matches.map((match) => {
+      //     const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
+      //     const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
+      //     return {
+      //         match_id: match.game_id,
+      //         match_name: match.title,
+      //         banner: match.image_url,
+      //         stream_link: match.current_state === "live" ? cleanedStreamLink : null, // Livestream URL for live matches
+      //         lic_url: match.lic_url, // Licensing URL for DRM content
+      //         lic_token: match.lic_token, // DRM token for secure streaming
+      //       team_1: match.home_team,
+      //         team_2: match.away_team,
+      //       broadcaster: match.broadcaster,
+      //         status: match.current_state === "live" ? "LIVE" : "UPCOMING",
+      //         date: match.start_time.indian_time,
+      //        end_time: match.end_time.indian_time,
+      //         clearkey_hex_key1: clearkeyParts[0] || null, // First part before the colon
+      //         clearkey_hex_key2: clearkeyParts[1] || null, // Second part after the colon
+      //         clearkey_base64: match.clearkey_base64, // If using ClearKey for DRM            
+      //     };
+      // });
 
-      const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
-        return fixture.streams
-          .filter((stream) => {
-            // Ensure streamName exists before calling toLowerCase()
-            const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
-            const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE" || stream.status === "Match Completed";
-            return containsCricket && isUpcomingOrLive;
-          })
-          .map((stream) => {
-            return {
-              match_id: fixture.fixtureId,
-              match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
-              banner: fixture.competitionImageUrl,
-              stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
-              status: stream.status, // Keep original status, including "Match Completed"
-              date: stream.startTime,
-              hls: fixture.competitionImageUrl, // Ensure correct HLS URL usage
-            };
-          });
-      });
+      // const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
+      //   return fixture.streams
+      //     .filter((stream) => {
+      //       // Ensure streamName exists before calling toLowerCase()
+      //       const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
+      //       const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE" || stream.status === "Match Completed";
+      //       return containsCricket && isUpcomingOrLive;
+      //     })
+      //     .map((stream) => {
+      //       return {
+      //         match_id: fixture.fixtureId,
+      //         match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
+      //         banner: fixture.competitionImageUrl,
+      //         stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
+      //         status: stream.status, // Keep original status, including "Match Completed"
+      //         date: stream.startTime,
+      //         hls: fixture.competitionImageUrl, // Ensure correct HLS URL usage
+      //       };
+      //     });
+      // });
       
       
       
@@ -145,17 +145,17 @@ const matchesFromSecondJson = Array.from(
           ...matchesFromFirstJson.filter((m) => m.status === "LIVE"),
           ...matchesFromSecondJson.filter((m) => m.status === "LIVE"),
           ...matchesFromThirdJson.filter((m) => m.status === "LIVE"),
-          ...matchesFromFourthJson.filter((m) => m.status === "LIVE"),
-          ...matchesFromFifthJson.filter((m) => m.status === "LIVE"),
+          //...matchesFromFourthJson.filter((m) => m.status === "LIVE"),
+          //...matchesFromFifthJson.filter((m) => m.status === "LIVE"),
         ];
 
         const upcomingMatches = [
             //...matchesFromHotstar,
           ...matchesFromThirdJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromFirstJson.filter((m) => m.status === "UPCOMING"),
-          ...matchesFromFourthJson.filter((m) => m.status === "UPCOMING"),
+          //...matchesFromFourthJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromSecondJson.filter((m) => m.status === "UPCOMING"),
-          ...matchesFromFifthJson.filter((m) => m.status === "UPCOMING"),
+         // ...matchesFromFifthJson.filter((m) => m.status === "UPCOMING"),
         ];
 
         const allMatches = [...liveMatches, ...upcomingMatches];
