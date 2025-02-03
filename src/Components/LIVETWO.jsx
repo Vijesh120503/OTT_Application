@@ -119,34 +119,96 @@ const Movies = () => {
   useEffect(() => {
     async function fetchChannels() {
       try {
-        const response = await fetch("https://shadow-tam-loc.vercel.app/");
-        const data = await response.json();
+        const response1 = await fetch("https://shadow-tam-loc.vercel.app/");
+        const response2 = await fetch("https://jio-shadow-cin.vercel.app/");
+        const response3 = await fetch("https://jio-shadow-cin.vercel.app/");
+        const data1 = await response1.json();
+        const data2 = await response2.json();
+        const data3 = await response3.json();
+    
 
-        // Log the response to ensure the structure is as expected
-        console.log(data);
-
-        if (response.ok && data.channels && Array.isArray(data.channels)) {
+    
+        if (
+          response1.ok &&
+          response2.ok &&
+          response3.ok &&
+          data1.channels &&
+          Array.isArray(data1.channels) &&
+          data2.channels &&
+          Array.isArray(data2.channels) &&
+          data3.channels &&
+          Array.isArray(data3.channels)
+        ) {
           const modifiedChannels = Array.from(
             new Map(
-              data.channels.map((channel) => [
+              data1.channels.map((channel) => [
                 channel.channel ?? "Unknown Channel",
                 {
-                  name: channel.channel, 
-                  image: channel.logo ?? "default-image.png", 
-                  link: channel.url 
+                  name: channel.channel,
+                  image: channel.logo ?? "default-image.png",
+                  link: channel.url,
                 },
               ])
             ).values()
           );
-
-          console.log("Modified Channels:", modifiedChannels);
-
+    
+          const modifiedChannel = Array.from(
+            new Map(
+              data2.channels
+                .filter((channel) => !channel.name.startsWith("Sony")) // Filter out channels starting with "Sony"
+                .map((channel) => [
+                  channel.name ?? "Unknown Channel", // Using the channel name as the key
+                  {
+                    name: channel.name,
+                    image: channel.logo ?? "https://images-eu.ssl-images-amazon.com/images/I/41qzICrlFOL.png", // Providing a default image if 'logo' is not available
+                    link: `https://shadow-player.netlify.app?manifest=${encodeURIComponent(channel.m3u8_url)}`, // Passing the m3u8_url as a query parameter
+                  },
+                ])
+            ).values()
+          );
+          const modifiedChanne = Array.from(
+            new Map(
+              data2.channels
+                .filter((channel) => channel.name.startsWith("Sony")) // Filter out channels starting with "Sony"
+                .map((channel) => [
+                  channel.name ?? "Unknown Channel", // Using the channel name as the key
+                  {
+                    name: channel.name,
+                    image: channel.logo ?? "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sony_Channel_Logo.png", // Providing a default image if 'logo' is not available
+                    link: channel.m3u8_url, // Passing the m3u8_url as a query parameter
+                  },
+                ])
+            ).values()
+          );
+          
+          
+          
+    
+          
+    
           setAllChannels([
             ...predefinedChannels,
-            { name: "Local Channel", image: "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2011.36.02%20-%20A%20black%20pitbull%20with%20a%20white%20face%20on%20one%20side%20and%20a%20white%20chest%2C%20wearing%20a%20traditional%20lungi%20and%20dancing.%20The%20pitbull%20has%20a%20joyful%20expression%2C%20standin.webp", shows: modifiedChannels },
+            {
+              name: "Local Channels",
+              image:
+                "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2011.36.02%20-%20A%20black%20pitbull%20with%20a%20white%20face%20on%20one%20side%20and%20a%20white%20chest%2C%20wearing%20a%20traditional%20lungi%20and%20dancing.%20The%20pitbull%20has%20a%20joyful%20expression%2C%20standin.webp",
+              shows: modifiedChannels,
+            },
+            {
+              name: "Sony Channels",
+              image:
+                "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2013.45.02%20-%20A%20black%20pitbull%20with%20a%20half-white%20face%20and%20a%20white%20chest%2C%20sitting%20confidently%20while%20holding%20a%20badge%20with%20the%20word%20'Sony'%20on%20it.%20The%20background%20is%20a%20si.webp",
+              shows: modifiedChanne,
+            },
+            {
+              name: "Jio Channels",
+              image:
+                "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2013.44.42%20-%20A%20black%20pitbull%20with%20a%20half-white%20face%20and%20a%20white%20chest%2C%20sitting%20confidently%20while%20holding%20a%20badge%20with%20the%20text%20'JioCinema'%20on%20it.%20The%20background%20is.webp",
+              shows: modifiedChannel,
+            },
           ]);
         } else {
-          console.error("Error: Received invalid data:", data);
+          console.error("Error: Received invalid data");
           setAllChannels(predefinedChannels);
         }
       } catch (error) {
@@ -154,6 +216,7 @@ const Movies = () => {
         setAllChannels(predefinedChannels);
       }
     }
+    
 
     fetchChannels();
   }, []);
@@ -187,9 +250,10 @@ const Movies = () => {
             {selectedAlbum.shows.map((video, index) => (
               <div key={index} className="son" onClick={() => handleVideoClick(video)}>
                 <img src={video.image} alt={video.name} />
-                {selectedAlbum.name === "Local Channel" ? (
-                <p>{video.name}</p>
-              ) : null}
+                {selectedAlbum.name === "Local Channels" || selectedAlbum.name === "Jio Channels" || selectedAlbum.name === "Sony Channels" ? (
+  <p>{video.name}</p>
+) : null}
+
               </div>
             ))}
           </div>
