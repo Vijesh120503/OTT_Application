@@ -161,7 +161,7 @@ const Movies = () => {
                   {
                     name: channel.name,
                     image: channel.logo ?? "https://images-eu.ssl-images-amazon.com/images/I/41qzICrlFOL.png", // Providing a default image if 'logo' is not available
-                    link: `https://shadow-player.netlify.app?manifest=${encodeURIComponent(channel.m3u8_url)}`, // Passing the m3u8_url as a query parameter
+                    link: `https://shadowplayer.netlify.app?manifest=${encodeURIComponent(channel.m3u8_url)}`, // Passing the m3u8_url as a query parameter
                   },
                 ])
             ).values()
