@@ -247,10 +247,10 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
         const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
          return fixture.streams
      .filter((stream) => 
-       // Ensure streamName exists before calling toLowerCase()/  
+       // Ensure streamName exists before calling toLowerCase() 
       const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
-       const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE";
-       return containsCricket && isUpcomingOrLive;
+      const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE";
+        return containsCricket && isUpcomingOrLive;
      })
     .map((stream) => {
        return {
