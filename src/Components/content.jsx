@@ -229,7 +229,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
         // Normalize data from the fourth JSON (with ClearKey DRM handling)
        const matchesFromFourthJson = data4.matches
         .filter((match) => match.current_state==='live') // Filter only live matches
-/        .map((match) => {
+        .map((match) => {
              const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
             const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
     
