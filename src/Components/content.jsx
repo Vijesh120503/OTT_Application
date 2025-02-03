@@ -174,9 +174,8 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
                 match_name: match.episodeTitle || "Unnamed Match",
                 banner: match.portraitThumb || "",
                 stream_link: match.portraitThumb.includes("multilang")
-        ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
-        // : match.title.startsWith("WWE") || match.title.startsWith("HOCKEY")
-        // ? "https://dai.google.com/ssai/event/x4LxWUcVSIiDaq1VCM7DSA/master.m3u8"
+        ? "https://live.drmlive-02.workers.dev/sliv/ten4hd.m3u8"
+         : match.title.startsWith("WWE") ? "https://live.drmlive-02.workers.dev/sliv/ten4hd.m3u8"
         : match.pub_url,
   
             }));
