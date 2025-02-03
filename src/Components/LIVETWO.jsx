@@ -146,46 +146,30 @@ const Movies = () => {
   useEffect(() => {
     async function fetchChannels() {
       try {
-        const data1 = ("https://shadow-tam-loc.vercel.app/");
-        const data2 = ("https://jio-shadow-cin.vercel.app/");
-        // const data1 = await response1.json();
-        // const data2 = await response2.json();
-        if (
-
-          data1.channels &&
-          Array.isArray(data1.channels) &&
-          data2.channels &&
-          Array.isArray(data2.channels)
-
-        ){
-          const modifiedChannels = Array.from(
-            new Map(
-              data1.channels.map((channel) => [
-                channel.channel ?? "Unknown Channel",
-                {
-                  name: channel.channel,
-                  image: channel.logo ?? "default-image.png",
-                  link: channel.url,
-                },
-              ])
-            ).values()
-          );
-    
+        const response2 = await fetch("https://jio-shadow-cin.vercel.app/");
+  
+        if (!response2.ok) {
+          throw new Error(`HTTP error! Status: ${response2.status}`);
+        }
+  
+        const data2 = await response2.json();
+  
+        if (data2.channels && Array.isArray(data2.channels)) {
           const modifiedChannel = Array.from(
             new Map(
               data2.channels
-                .filter((channel) => !channel.name.startsWith("Sony")) // Filter out channels starting with "Sony"
+                .filter((channel) => !channel.name.startsWith("Sony")) // Filtering out "Sony" channels
                 .map((channel) => [
-                  channel.name ?? "Unknown Channel", // Using the channel name as the key
+                  channel.name ?? "Unknown Channel",
                   {
                     name: channel.name,
-                    image: channel.logo ?? "https://images-eu.ssl-images-amazon.com/images/I/41qzICrlFOL.png", // Providing a default image if 'logo' is not available
-                    link: `https://shadowplayer.netlify.app?manifest=${encodeURIComponent(channel.m3u8_url)}`, // Passing the m3u8_url as a query parameter
+                    image: channel.logo ?? "https://images-eu.ssl-images-amazon.com/images/I/41qzICrlFOL.png",
+                    link: `https://shadowplayer.netlify.app?manifest=${encodeURIComponent(channel.m3u8_url)}`,
                   },
                 ])
             ).values()
           );
-
+  
           setAllChannels([
             ...predefinedChannels,
             {
@@ -194,17 +178,9 @@ const Movies = () => {
                 "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2013.44.42%20-%20A%20black%20pitbull%20with%20a%20half-white%20face%20and%20a%20white%20chest%2C%20sitting%20confidently%20while%20holding%20a%20badge%20with%20the%20text%20'JioCinema'%20on%20it.%20The%20background%20is.webp",
               shows: modifiedChannel,
             },
-            {
-              name: "Local Channels",
-              image:
-                "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2011.36.02%20-%20A%20black%20pitbull%20with%20a%20white%20face%20on%20one%20side%20and%20a%20white%20chest%2C%20wearing%20a%20traditional%20lungi%20and%20dancing.%20The%20pitbull%20has%20a%20joyful%20expression%2C%20standin.webp",
-              shows: modifiedChannels,
-            },
-
-
           ]);
         } else {
-          console.error("Error: Received invalid data");
+          console.error("Invalid data structure received:", data2);
           setAllChannels(predefinedChannels);
         }
       } catch (error) {
@@ -212,10 +188,10 @@ const Movies = () => {
         setAllChannels(predefinedChannels);
       }
     }
-    
-
+  
     fetchChannels();
   }, []);
+  
 
   const handleAlbumClick = (album) => {
     setSelectedAlbum(album);
