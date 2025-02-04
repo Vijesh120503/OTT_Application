@@ -150,54 +150,86 @@ const Movies = () => {
   ];
 
   
-  useEffect(() => {
-    async function fetchChannels() {
-      try {
-        const response2 = await fetch("https://jio-shadow-cin.vercel.app/");
-  
-        if (!response2.ok) {
-          throw new Error(`HTTP error! Status: ${response2.status}`);
-        }
-  
-        const data2 = await response2.json();
-  
-        if (data2.channels && Array.isArray(data2.channels)) {
-          const modifiedChannel = Array.from(
-            new Map(
-              data2.channels
-                .filter((channel) => !channel.name.startsWith("Sony")) // Filtering out "Sony" channels
-                .map((channel) => [
-                  channel.name ?? "Unknown Channel",
-                  {
-                    name: channel.name,
-                    image: channel.logo ?? "https://images-eu.ssl-images-amazon.com/images/I/41qzICrlFOL.png",
-                    link: `https://shadowplayer.netlify.app?manifest=${encodeURIComponent(channel.m3u8_url)}`,
-                  },
-                ])
-            ).values()
-          );
-  
-          setAllChannels([
-            ...predefinedChannels,
-            {
-              name: "Jio Channels",
-              image:
-                "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2013.44.42%20-%20A%20black%20pitbull%20with%20a%20half-white%20face%20and%20a%20white%20chest%2C%20sitting%20confidently%20while%20holding%20a%20badge%20with%20the%20text%20'JioCinema'%20on%20it.%20The%20background%20is.webp",
-              shows: modifiedChannel,
-            },
-          ]);
-        } else {
-          console.error("Invalid data structure received:", data2);
-          setAllChannels(predefinedChannels);
-        }
-      } catch (error) {
-        console.error("Error fetching channels:", error);
-        setAllChannels(predefinedChannels);
+useEffect(() => {
+  async function fetchChannels() {
+    try {
+      // Fetch from the first API (Jio Shadow)
+      const response1 = await fetch("https://jio-shadow-cin.vercel.app/");
+      if (!response1.ok) {
+        throw new Error(`HTTP error! Status: ${response1.status}`);
       }
+      const data1 = await response1.json();
+
+      let modifiedChannel1 = [];
+      if (data1.channels && Array.isArray(data1.channels)) {
+        modifiedChannel1 = Array.from(
+          new Map(
+            data1.channels
+              .filter((channel) => !channel.name.startsWith("Sony"))
+              .map((channel) => [
+                channel.name ?? "Unknown Channel",
+                {
+                  name: channel.name,
+                  image: channel.logo ?? "https://images-eu.ssl-images-amazon.com/images/I/41qzICrlFOL.png",
+                  link: `https://shadowplayer.netlify.app?manifest=${encodeURIComponent(channel.m3u8_url)}`,
+                },
+              ])
+          ).values()
+        );
+      }
+
+      // Fetch from the second API (Shadow Direct Go)
+      const response2 = await fetch("https://shadow-direct-go-sun-1205.vercel.app/");
+      if (!response2.ok) {
+        throw new Error(`HTTP error! Status: ${response2.status}`);
+      }
+      const data2 = await response2.json();
+
+      let modifiedChannel2 = [];
+      if (data2 && typeof data2 === "object") {
+        const channelsArray = Object.values(data2).reverse();
+        modifiedChannel2 = channelsArray.map((channel) => {
+          let keyid = "", key = "";
+          if (channel.hex_keys) {
+            const keys = channel.hex_keys.split(":");
+            if (keys.length === 2) {
+              [keyid, key] = keys;
+            } else {
+              console.error("Invalid hex_keys format for channel:", channel.name, channel.hex_keys);
+            }
+          }
+          return {
+            name: channel.name ?? "Unknown Channel",
+            image: channel.logo ?? "https://images-eu.ssl-images-amazon.com/images/I/41qzICrlFOL.png",
+            link: `https://shadowplayer.netlify.app/?manifest=${encodeURIComponent(channel.dashWidewinePlayUrl)}&keyid=${keyid}&key=${key}&cookie=&userAgent=`,
+          };
+        });
+      }
+
+      // Merging both sets of channels
+      setAllChannels([
+        ...predefinedChannels,
+        {
+          name: "Jio Channels",
+          image:
+            "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2013.44.42%20-%20A%20black%20pitbull%20with%20a%20half-white%20face%20and%20a%20white%20chest%2C%20sitting%20confidently%20while%20holding%20a%20badge%20with%20the%20text%20'JioCinema'%20on%20it.%20The%20background%20is.webp",
+          shows: modifiedChannel1,
+        },
+        {
+          name: "Shadow Direct Go Channels",
+          image: "https://github.com/vijesh0512/image/blob/main/sun.jpg?raw=true",
+          shows: modifiedChannel2,
+        },
+      ]);
+    } catch (error) {
+      console.error("Error fetching channels:", error);
+      setAllChannels(predefinedChannels);
     }
-  
-    fetchChannels();
-  }, []);
+  }
+
+  fetchChannels();
+}, []);
+
   
 
   const handleAlbumClick = (album) => {
