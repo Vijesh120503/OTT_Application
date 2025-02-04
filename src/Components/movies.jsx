@@ -22,7 +22,7 @@ const shows = [
     image: 'https://play-lh.googleusercontent.com/5lGwoUsh5Z1eopCpGQIQjfoGqUHTJU_tAXNkdm1eiBVGGKoXqk5jX8Vm7DiAn42Lwbk6',
     shows: [
         {name:'Bioscope',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kyaBJOQzVIiO1y9ruGo1bNZ-Q8inlhObKg&usqp=CAU',link:'https://dls3.mrfooll.xyz/AgADCW3514747'},
-        {name:'Vanangaan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU',link:'https://blacktv.in/Vanangaan.mp4'},
+        {name:'Vanangaan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU',link:'https://cdp.tamilcloud.pro/Vanangaan-(2025)/Tamilkolly.Life_-_Vanangaan_(2025)_Tamil_HDRip_700MB.mp4?dl=true'},
         {name:'Madha Gaja Raja',image:'https://images.jdmagicbox.com/comp/jd_social/news/2018jul24/image-139962-cobm4nu9gq.jpg',link:'https://blacktv.in/Madha_Gaja_Raja.mp4'},
         {name:'Thiru Manickam',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGTCw5Ktxd-t70okCzWMUKEeUTQT_f4SXCuw&usqp=CAU',link:'https://blacktv.in/Thiru_Manickam.mp4'},
         
