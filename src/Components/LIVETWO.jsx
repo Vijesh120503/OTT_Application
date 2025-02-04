@@ -115,7 +115,7 @@ const Movies = () => {
         { name: 'MNX HD', image: 'https://vignette.wikia.nocookie.net/logopedia/images/b/b3/MNX_logo.png/revision/latest/scale-to-width-down/250?cb=20200114193517', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Ftimes-ott-live.akamaized.net%2Fmnxhd_wv_drm%2Findex.mpd&keyid=40f019b86241d23ef075633fd7f1e927&key=058dec845bd340178a388edd104a015e&cookie=&userAgent=' },
       {name:'Sony Pix HD',image:'https://www.sonypicturesnetworks.com/images/logos/PIX%20HD_WHITE.png',link:'https://shadowplayer.netlify.app/?manifest=https%3A%5C%2F%5C%2Fsundirectgo-live.pc.cdn.bitgravity.com%5C%2Fhd24%5C%2Fdth.mpd&keyid=8c1904fb02bc4cb1902d400a77bf7de3&key=7f835054abe115d21666b317bc4219dc&cookie=&userAgent='},
           { name: 'Romedy Now', image: 'https://tse1.mm.bing.net/th?id=OIP.LEP1WrAF6cBCorIoHmiL3wHaEs&pid=Api&P=0&h=220', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Ftimes-ott-live.akamaized.net%2Fromedynow_wv_drm%2Findex.mpd&keyid=40f019b86241d23ef075633fd7f1e927&key=058dec845bd340178a388edd104a015e&cookie=&userAgent='        },
-      {name:'MN+',image:'https://tatalogo.pages.dev/210.png',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Ftimes-ott-live.akamaized.net%2Fmnplus_wv_drm%2Findex.mpd&keyid=40f019b86241d23ef075633fd7f1e927&key=058dec845bd340178a388edd104a015e&cookie=&userAgent='},
+     
       //  {name:'Star movies',image:'https://pluspng.com/img-png/star-movies-png-file-star-movies-logo-svg-1280.png',link:"https://allinonereborn.com/tatatv.php?id=17089"},
     //  {name:"Star movies select",image:'https://vignette.wikia.nocookie.net/logopedia/images/c/c5/SMSHD.png/revision/latest?cb=20190810162735',link:'https://allinonereborn.com/tatatv.php?id=17092'},
         
