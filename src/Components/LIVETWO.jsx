@@ -121,7 +121,7 @@ const Movies = () => {
         
     ],},
 
-    {name:'Sony Channels',image:'https://github.com/vijesh0512/image/blob/main/v.png?raw=true',shows:[
+    {name:'Sony',image:'https://github.com/vijesh0512/image/blob/main/v.png?raw=true',shows:[
   {name: "SONY HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/sony.m3u8"},
   {name: "SONY SAB HD", image: "http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_SAB_HD.png", link: "https://live.drmlive-02.workers.dev/sliv/sab.m3u8"},
   {name: "SONY KAL", image: "https://i.postimg.cc/ZqnmcXdx/Sony-KAL.png", link: "https://spt-sonykal-1-us.lg.wurl.tv/playlist.m3u8"},
@@ -210,13 +210,13 @@ useEffect(() => {
       setAllChannels([
         ...predefinedChannels,
         {
-          name: "Jio Channels",
+          name: "Jio",
           image:
             "https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-03%2013.44.42%20-%20A%20black%20pitbull%20with%20a%20half-white%20face%20and%20a%20white%20chest%2C%20sitting%20confidently%20while%20holding%20a%20badge%20with%20the%20text%20'JioCinema'%20on%20it.%20The%20background%20is.webp",
           shows: modifiedChannel1,
         },
         {
-          name: "Shadow Direct Go Channels",
+          name: "Sun Direct Go",
           image: "https://github.com/vijesh0512/image/blob/main/sun.jpg?raw=true",
           shows: modifiedChannel2,
         },
@@ -261,7 +261,7 @@ useEffect(() => {
             {selectedAlbum.shows.map((video, index) => (
               <div key={index} className="son" onClick={() => handleVideoClick(video)}>
                 <img src={video.image} alt={video.name} />
-                {selectedAlbum.name === "Local Channels" || selectedAlbum.name === "Jio Channels"  ? (
+                {selectedAlbum.name === "Local Channels" || selectedAlbum.name === "Jio"  ? (
   <p>{video.name}</p>
 ) : null}
 
