@@ -94,6 +94,8 @@ const Movies = () => {
        {name:'JC Sports',image:'https://v3img.voot.com/resizeMedium,w_1090,h_613/v3Storage/assets/sports_zone_cricket_horizontal-1695032322122.jpg',link:'https://www.8088y.site/Jio-Cinema/play.html?c=CricStream'},
        {name:'DD Sports',image:'https://3.bp.blogspot.com/-4HgMqC7Q7r4/UaCEt9RuTzI/AAAAAAAAAaU/8ovoQBIa-7Q/s1600/DD+Sports.png',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fdeadpooll.fun%2Flive.php%3Fid%3D204%26key%3DJITENDRAUNATTI%26e%3D.m3u8&keyid=&key=&cookie=&userAgent='},
        { name: 'Eurosport', image: 'http://logos-download.com/wp-content/uploads/2016/06/Eurosport_logo.png', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fdeadpooll.fun%2Flive.php%3Fid%3D875%26key%3DJITENDRAUNATTI%26e%3D.m3u8&keyid=&key=&cookie=&userAgent=' },
+      {name:'Sky Sports Cricket',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsJfrsgftMR01aAAfBLA5nTPdR3cYhfb31rg&usqp=CAU',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fcx55.xyz%2FUK_SKY_SPORTS_CRICKET%2Ftracks-v1a1%2Fmono.ts.m3u8%3Ftoken%3D0c212cd056dc5c0ecd171b719721014f&keyid=&key=&cookie=&userAgent='},
+    
     ],},
   
     {
@@ -115,7 +117,7 @@ const Movies = () => {
         { name: 'MNX HD', image: 'https://vignette.wikia.nocookie.net/logopedia/images/b/b3/MNX_logo.png/revision/latest/scale-to-width-down/250?cb=20200114193517', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Ftimes-ott-live.akamaized.net%2Fmnxhd_wv_drm%2Findex.mpd&keyid=40f019b86241d23ef075633fd7f1e927&key=058dec845bd340178a388edd104a015e&cookie=&userAgent=' },
       {name:'Sony Pix HD',image:'https://www.sonypicturesnetworks.com/images/logos/PIX%20HD_WHITE.png',link:'https://shadowplayer.netlify.app/?manifest=https%3A%5C%2F%5C%2Fsundirectgo-live.pc.cdn.bitgravity.com%5C%2Fhd24%5C%2Fdth.mpd&keyid=8c1904fb02bc4cb1902d400a77bf7de3&key=7f835054abe115d21666b317bc4219dc&cookie=&userAgent='},
           { name: 'Romedy Now', image: 'https://tse1.mm.bing.net/th?id=OIP.LEP1WrAF6cBCorIoHmiL3wHaEs&pid=Api&P=0&h=220', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Ftimes-ott-live.akamaized.net%2Fromedynow_wv_drm%2Findex.mpd&keyid=40f019b86241d23ef075633fd7f1e927&key=058dec845bd340178a388edd104a015e&cookie=&userAgent='        },
-     
+      {name:'&Flix',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Wh9_dBU4ZHNT1Oum29-s05FImvpPZSnVKCXUxANSFwEAb4mBJGvvn4s&s=10',link:'https://www.8088y.site/Zee5/play.php?id=0-9-channel_2105335046'},
       //  {name:'Star movies',image:'https://pluspng.com/img-png/star-movies-png-file-star-movies-logo-svg-1280.png',link:"https://allinonereborn.com/tatatv.php?id=17089"},
     //  {name:"Star movies select",image:'https://vignette.wikia.nocookie.net/logopedia/images/c/c5/SMSHD.png/revision/latest?cb=20190810162735',link:'https://allinonereborn.com/tatatv.php?id=17092'},
         
