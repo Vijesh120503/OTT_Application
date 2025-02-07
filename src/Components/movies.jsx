@@ -9,7 +9,7 @@ const shows = [
     name: 'Theatre Print',
     image: 'https://s2.r29static.com/bin/entry/2ab/0,791,5615,2948/x,80/1650643/image.jpg',
     shows: [
-        {name:'Vidamuyarchi',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqwIXRVFB8gSJHU5ULuBhTE7qo4tIEWHBIA&usqp=CAU',link:'https://dls3.mrfooll.xyz/AgADSC3559167'},
+        {name:'Vidamuyarchi',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqwIXRVFB8gSJHU5ULuBhTE7qo4tIEWHBIA&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vidaamuyarchi%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Mr.Housekeeping',image:'https://assetscdn1.paytm.com/images/cinema/Mr.HouseKeeping--Gallery-a0e7d350-aafd-11ef-8bec-85ca743197e0.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Mr%20House%20Keeping%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20MP3%20-%20700MB.mkv'},
         {name:'Kudumbasthan',image:'https://assetscdn1.paytm.com/images/cinema/Kudumbasthan-Poster-a4577dc0-d7e3-11ef-83bf-1dede4761f84.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kudumbasthan%20(2025)%5BTamil%20-%20V2%20HQ-Real%20PreDVDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20HQ%20Line%20Audio%5D.mkv'},
         {name:'Bottle Radha',image:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/14b98b211395965.672221259a2ca.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Bottle%20Radha%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB%20-%20HC-ESub.mkv'},
@@ -22,7 +22,8 @@ const shows = [
     name: 'HD Movies',
     image: 'https://play-lh.googleusercontent.com/5lGwoUsh5Z1eopCpGQIQjfoGqUHTJU_tAXNkdm1eiBVGGKoXqk5jX8Vm7DiAn42Lwbk6',
     shows: [
-        {name:'Bioscope',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kyaBJOQzVIiO1y9ruGo1bNZ-Q8inlhObKg&usqp=CAU',link:'https://dls3.mrfooll.xyz/AgADCW3514747'},
+        {name:'Madaraskaran',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0mVBL2bMH9U0DxFx0ZDRNX12CsHu4QswRg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Madraskaaran%20(2025)%5BTamil%20-%20HQ-Real%20PreDVDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20HQ%20Line%20Audio%5D.mkv'},
+        {name:'Bioscope',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kyaBJOQzVIiO1y9ruGo1bNZ-Q8inlhObKg&usqp=CAU',link:'https://dls3.mrfooll.xyz/AgADCW3565525'},
         {name:'Vanangaan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vanangaan%20(2025)%20Tamil%20HDRip%20-%20x264%20-%20AAC%20-%20700MB.mkv'},
         {name:'Madha Gaja Raja',image:'https://images.jdmagicbox.com/comp/jd_social/news/2018jul24/image-139962-cobm4nu9gq.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Madha%20Gaja%20Raja%20(2025)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB.mkv'},
         {name:'Thiru Manickam',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGTCw5Ktxd-t70okCzWMUKEeUTQT_f4SXCuw&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Thiru.Manickam%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
