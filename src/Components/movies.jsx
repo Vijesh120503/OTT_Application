@@ -22,7 +22,7 @@ const shows = [
     name: 'HD Movies',
     image: 'https://play-lh.googleusercontent.com/5lGwoUsh5Z1eopCpGQIQjfoGqUHTJU_tAXNkdm1eiBVGGKoXqk5jX8Vm7DiAn42Lwbk6',
     shows: [
-        {name:'Madaraskaran',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0mVBL2bMH9U0DxFx0ZDRNX12CsHu4QswRg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Madraskaaran%20(2025)%5BTamil%20-%20HQ-Real%20PreDVDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20HQ%20Line%20Audio%5D.mkv'},
+        {name:'Madaraskaran',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0mVBL2bMH9U0DxFx0ZDRNX12CsHu4QswRg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Madraskaaran%20(2025)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
         {name:'Bioscope',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kyaBJOQzVIiO1y9ruGo1bNZ-Q8inlhObKg&usqp=CAU',link:'https://dls3.mrfooll.xyz/AgADCW3565525'},
         {name:'Vanangaan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vanangaan%20(2025)%20Tamil%20HDRip%20-%20x264%20-%20AAC%20-%20700MB.mkv'},
         {name:'Madha Gaja Raja',image:'https://images.jdmagicbox.com/comp/jd_social/news/2018jul24/image-139962-cobm4nu9gq.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Madha%20Gaja%20Raja%20(2025)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB.mkv'},
