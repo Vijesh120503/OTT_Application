@@ -30,17 +30,19 @@ const Navbar = ({ onNavClick }) => {
     <>
       <div className='navflex'>
         <img src="./line.jfif" alt="line" onClick={toggleSide} />
-        {/* <img 
+        <div>
+        {<img 
           src="https://static.vecteezy.com/system/resources/previews/009/793/387/non_2x/india-currency-rupee-icon-symbol-illustration-vector.jpg" 
           alt="payment icon"  
           onClick={openPayment} 
-        /> */}
+        /> }
         <img
-  src="https://icones.pro/wp-content/uploads/2022/01/icone-de-commentaires-grise.png"
-  alt="Feedback Icon"
-  style={{ cursor: "pointer" }}
-  onClick={() => (window.location.href = "https://shadow-chat-1205.vercel.app/")}
-/>
+            src="https://icones.pro/wp-content/uploads/2022/01/icone-de-commentaires-grise.png"
+            alt="Feedback Icon"
+            style={{ cursor: "pointer" }}
+            onClick={() => (window.location.href = "https://shadow-chat-1205.vercel.app/")}
+        />
+        </div>
 
         {/* <h1 className='navbar'>SHADOW PLAYER</h1> */}
       </div>
