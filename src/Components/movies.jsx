@@ -9,6 +9,7 @@ const shows = [
     name: 'Theatre Print',
     image: 'https://s2.r29static.com/bin/entry/2ab/0,791,5615,2948/x,80/1650643/image.jpg',
     shows: [
+        {name:'Thandel',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRppQKLkGTsxaPv9ECnI3dm27xFsxI9mxJCPuN334N1v3Dc3tO7ImiFmfx&s=10',link:'https://dls3.mrfooll.xyz/AgADYx3586837'},
         {name:'Vidamuyarchi',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqwIXRVFB8gSJHU5ULuBhTE7qo4tIEWHBIA&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vidaamuyarchi%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Mr.Housekeeping',image:'https://assetscdn1.paytm.com/images/cinema/Mr.HouseKeeping--Gallery-a0e7d350-aafd-11ef-8bec-85ca743197e0.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Mr%20House%20Keeping%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20MP3%20-%20700MB.mkv'},
         {name:'Kudumbasthan',image:'https://assetscdn1.paytm.com/images/cinema/Kudumbasthan-Poster-a4577dc0-d7e3-11ef-83bf-1dede4761f84.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kudumbasthan%20(2025)%5BTamil%20-%20V2%20HQ-Real%20PreDVDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20HQ%20Line%20Audio%5D.mkv'},
