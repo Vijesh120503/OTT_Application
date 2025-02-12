@@ -237,7 +237,7 @@ useEffect(() => {
 }, []);
 
     if (loading) {
-    return <div style={{ color: "white" }}>Loading matches...</div>;
+    return <div style={{ color: "white" }}>Loading Channels...</div>;
     }
 
   
