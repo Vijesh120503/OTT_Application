@@ -7,7 +7,8 @@ import './album.css';
 const Movies = () => {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
   const [allChannels, setAllChannels] = useState([]);
-
+    const [loading, setLoading] = useState(true);
+  
   // Predefined channels (Example)
   const predefinedChannels = [
     {
