@@ -232,6 +232,10 @@ useEffect(() => {
   fetchChannels();
 }, []);
 
+    if (loading) {
+    return <div style={{ color: "white" }}>Loading matches...</div>;
+    }
+
   
 
   const handleAlbumClick = (album) => {
