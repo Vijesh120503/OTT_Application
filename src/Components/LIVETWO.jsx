@@ -228,6 +228,9 @@ useEffect(() => {
       console.error("Error fetching channels:", error);
       setAllChannels(predefinedChannels);
     }
+    finally {
+        setLoading(false);
+    }
   }
 
   fetchChannels();
