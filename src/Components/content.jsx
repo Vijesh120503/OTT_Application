@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './live.css';
 const stream = [
- {name:'CCL',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9101/1739461999101-h',link:'https://live.drmlive-02.workers.dev/sliv/ten3hd.m3u8'},
+ //{name:'CCL',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9101/1739461999101-h',link:'https://live.drmlive-02.workers.dev/sliv/ten3hd.m3u8'},
 //{name:'BRH vs SYS',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkaNjFqHKLIoqmOhx8KSXXG69AhjEngPkNZHCBjqrXRUa67hy8CHLMW1dA&s=10',link:'https://s.bdixtv24.com/sportstv.php?c=skyscric'},
 // {name:'2nd T20',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7822/1737535877822-h',link:'https://tsneh.vercel.app/tnt1-shadow'},
  // {name:'JSK vs PR',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_2048/sources/r1/cms/prod/532/1735025930532-a',link:'https://tapmadtv.live/play.php?c=willowusa'},
@@ -261,14 +261,6 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
                   hls: fixture.competitionImageUrl, // Ensure correct HLS URL usage
               }));
       });
-      
-
-    
-        
-    
- 
-    
-    
 
         // Combine all live matches
         const liveMatches = [
