@@ -9,7 +9,7 @@ const shows = [
     name: 'Theatre Print',
     image: 'https://s2.r29static.com/bin/entry/2ab/0,791,5615,2948/x,80/1650643/image.jpg',
     shows: [
-        {name:'Thandel',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRppQKLkGTsxaPv9ECnI3dm27xFsxI9mxJCPuN334N1v3Dc3tO7ImiFmfx&s=10',link:'https://dls3.mrfooll.xyz/AgADYx3586837'},
+        {name:'Thandel',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRppQKLkGTsxaPv9ECnI3dm27xFsxI9mxJCPuN334N1v3Dc3tO7ImiFmfx&s=10',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Thandel%20(2025)%20Tamil%20PRE%20HD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Vidamuyarchi',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqwIXRVFB8gSJHU5ULuBhTE7qo4tIEWHBIA&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vidaamuyarchi%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Mr.Housekeeping',image:'https://assetscdn1.paytm.com/images/cinema/Mr.HouseKeeping--Gallery-a0e7d350-aafd-11ef-8bec-85ca743197e0.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Mr%20House%20Keeping%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20MP3%20-%20700MB.mkv'},
         {name:'Kudumbasthan',image:'https://assetscdn1.paytm.com/images/cinema/Kudumbasthan-Poster-a4577dc0-d7e3-11ef-83bf-1dede4761f84.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kudumbasthan%20(2025)%5BTamil%20-%20V2%20HQ-Real%20PreDVDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20HQ%20Line%20Audio%5D.mkv'},
@@ -23,7 +23,7 @@ const shows = [
     name: 'HD Movies',
     image: 'https://play-lh.googleusercontent.com/5lGwoUsh5Z1eopCpGQIQjfoGqUHTJU_tAXNkdm1eiBVGGKoXqk5jX8Vm7DiAn42Lwbk6',
     shows: [
-        {name:'Kathalikka Neramillai',image:'https://tse2.mm.bing.net/th?id=OIP.3A5tCwOyrjVTh1tjVpmd0QHaDt&pid=Api&P=0&h=220',link:'https://dls3.mrfooll.xyz/AgADzm3594022'},
+        {name:'Kathalikka Neramillai',image:'https://tse2.mm.bing.net/th?id=OIP.3A5tCwOyrjVTh1tjVpmd0QHaDt&pid=Api&P=0&h=220',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kadhalikka%20Neramillai%20(2025)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
         {name:'Madaraskaran',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0mVBL2bMH9U0DxFx0ZDRNX12CsHu4QswRg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Madraskaaran%20(2025)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
         {name:'Bioscope',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kyaBJOQzVIiO1y9ruGo1bNZ-Q8inlhObKg&usqp=CAU',link:'https://dls3.mrfooll.xyz/AgADCW3565525'},
         {name:'Vanangaan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vanangaan%20(2025)%20Tamil%20HDRip%20-%20x264%20-%20AAC%20-%20700MB.mkv'},
