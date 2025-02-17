@@ -8,8 +8,7 @@ const Movies = () => {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
   const [allChannels, setAllChannels] = useState([]);
     const [loading, setLoading] = useState(true);
-  
-  // Predefined channels (Example)
+
   const predefinedChannels = [
     {
       name:'Entertainment',image:'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202025-02-01%2013.03.25%20-%20A%20black%20pitbull%20dog%20with%20a%20white%20chest%20and%20one%20side%20of%20its%20face%20white%2C%20looking%20entertained%20and%20happy.%20The%20dog%20is%20wearing%20a%20stylish%20gold%20chain%20while%20en.webp',shows:[ 
@@ -156,7 +155,7 @@ const Movies = () => {
 useEffect(() => {
   async function fetchChannels() {
     try {
-      // Fetch from the first API (Jio Shadow)
+
       const response1 = await fetch("https://jio-shadow-cin.vercel.app/");
       if (!response1.ok) {
         throw new Error(`HTTP error! Status: ${response1.status}`);
@@ -181,7 +180,6 @@ useEffect(() => {
         );
       }
 
-      // Fetch from the second API (Shadow Direct Go)
     const response2 = await fetch("https://shadow-direct-go-sun-1205.vercel.app/");
       if (!response2.ok) {
         throw new Error(`HTTP error! Status: ${response2.status}`);
@@ -209,7 +207,7 @@ useEffect(() => {
         });
       }
 
-      // Merging both sets of channels
+   
       setAllChannels([
         ...predefinedChannels,
         {
