@@ -34,7 +34,7 @@ const movies = [
 const others = [
   {name:'Sports',image:'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/file-7WwFgYwgnfoP5MX5MbGAHc.webp',link:'Sports'},
   { name: 'Songs', image: 'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202024-09-21%2012.26.50%20-%20A%20close-up%20of%20a%20black%20and%20white%20pitbull%20dog%20wearing%20a%20gold%20chain.%20The%20dog%20is%20sitting%20indoors%20and%20smiling%20with%20its%20tongue%20slightly%20out.%20The%20white%20fur%20o.webp', link: 'Albums' },
- //{ name: 'TV', image: 'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202024-09-21%2012.38.22%20-%20A%20close-up%20of%20a%20black%20and%20white%20pitbull%20dog%20wearing%20a%20gold%20chain%2C%20sitting%20on%20a%20cozy%20couch%20in%20a%20modern%20living%20room.%20The%20dog%20is%20watching%20TV%2C%20with%20a%20colo.webp', link: 'vlc' },
+ { name: 'TV', image: 'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202024-09-21%2012.38.22%20-%20A%20close-up%20of%20a%20black%20and%20white%20pitbull%20dog%20wearing%20a%20gold%20chain%2C%20sitting%20on%20a%20cozy%20couch%20in%20a%20modern%20living%20room.%20The%20dog%20is%20watching%20TV%2C%20with%20a%20colo.webp', link: 'TV' },
   //{ name: 'Kids', image: 'https://github.com/vijesh0512/image/blob/main/e9cf8cc9-062e-4f62-8186-777aa9db4e6a_2.jpeg?raw=true', link: 'Kids' },
   { name: 'Series', image: 'https://github.com/vijesh0512/image/blob/main/67dfdc92-1649-4b36-8656-a408f747b91e_3.jpeg?raw=true', link: 'Series' },
   { name: 'Video Songs', image: 'https://raw.githubusercontent.com/vijesh0512/image/refs/heads/main/DALL%C2%B7E%202024-09-28%2020.05.16%20-%20A%20black%20and%20white%20pitbull%20dog%20wearing%20a%20gold%20chain%20and%20headphones%2C%20sitting%20in%20a%20dimly%20lit%20movie%20theater%2C%20facing%20the%20large%20screen%20playing%20a%20video%20song.webp', link: 'Video-Songs' },
@@ -148,9 +148,8 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
     if (!container) return;
     container.innerHTML = '<p style="color: white;">Loading matches...</p>';
     try {
-        const [response1, response2, response3, response4, response5] = await Promise.all([
+        const [response1, response2, response3, response4] = await Promise.all([
             fetch('https://sony-eight.vercel.app/'),
-            fetch('https://jiocinema-livid.vercel.app/'),
             fetch('https://fancode-two.vercel.app/'),
              fetch('https://gxr.vercel.app/'), // New API
              fetch('https://cric-aus.vercel.app/'),
@@ -163,12 +162,11 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
         const data1 = await response1.json();
         const data2 = await response2.json();
         const data3 = await response3.json();
-       const data4 = await response4.json(); // New API data
-        const data5 = await response5.json();
+       const data4 = await response4.json(); 
 
-        // Normalize and filter live matches for the first JSON
+
         const matchesFromFirstJson = data1.matches
-            .filter((match) => match.hmac_url !== null && match.hmac_url !== "") // Filter only live matches
+            .filter((match) => match.hmac_url !== null && match.hmac_url !== "") 
             .map((match) => ({
                 match_id: match.contentId || "unknown",
                 match_name: match.episodeTitle || "Unnamed Match",
@@ -180,44 +178,8 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
   
             }));
 
-        // Normalize data from the second JSON
-        const matchesFromSecondJson = Array.from(
-          new Map(
-              data2.map((match) => [
-                  match.id || 'unknown', // Use `match.id` or 'unknown' as the unique key
-                  {
-                      match_id: match.id || 'unknown',
-                      match_name: match.title || 'Unnamed Match',
-                      banner: match.logo || '',
-                      stream_link:match.link === 'URL not found' ? 'https%3A%2F%2Fottb.live.cf.ww.aiv-cdn.net%2Flhr-nitro%2Flive%2Fclients%2Fdash%2Fenc%2Fwf8usag51e%2Fout%2Fv1%2Fbd3b0c314fff4bb1ab4693358f3cd2d3%2Fcenc.mpd&keyid=ae26845bd33038a9c0774a0981007294&key=63ac662dde310cfb4cc6f9b43b34196d&cookie=&userAgent=' : modifyUrl(match.link),
-                      hls: match.logo,
-                  }
-              ])
-          ).values() // Extract only the values (unique matches)
-      );
-            function modifyUrl(url) {
-              if (!url) return null; // Handle null or undefined URLs
-          
-              // Strip parameters if present
-              const strippedUrl = url.split('?')[0];
-          
-              // Check if the URL is already in the desired format
-              if (strippedUrl.includes('-cf.jiocinema.com')) {
-                  return strippedUrl; // Leave it as is
-              }
-          
-              // Remove 'p' from 'sportsp'
-              const withoutP = strippedUrl.replace('sportsp', 'sports');
-          
-              // Add '-cf' before '.jiocinema'
-              const finalUrl = withoutP.replace('.jiocinema', '-cf.jiocinema');
-          
-              return finalUrl;
-          }
-
-        // Normalize and filter live matches for the third JSON
-        const matchesFromThirdJson = data3.matches
-            .filter((match) => match.status === 'LIVE') // Filter only live matches
+        const matchesFromThirdJson = data2.matches
+            .filter((match) => match.status === 'LIVE')
             .map((match) => ({
                 match_id: match.match_id || 'unknown',
                 match_name: match.match_name || 'Unnamed Match',
@@ -226,9 +188,9 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
               hls:match.adfree_url,
             }));
 
-        // Normalize data from the fourth JSON (with ClearKey DRM handling)
-       const matchesFromFourthJson = data4.matches
-        .filter((match) => match.current_state==='live') // Filter only live matches
+
+       const matchesFromFourthJson = data3.matches
+        .filter((match) => match.current_state==='live') 
         .map((match) => {
              const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
             const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
@@ -237,17 +199,16 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
               match_id: match.game_id || 'unknown',
                 match_name: match.title || 'Unnamed Match',
                 banner: match.image_url || '',
-                stream_link: cleanedStreamLink, // Livestream URL for live matches                 clearkey_hex_key1: clearkeyParts[0] || null, // First part before the colon
-                 clearkey_hex_key2: clearkeyParts[1] || null, // Second part after the
-                 lic_url: match.lic_url, // Licensing URL for DRM content
-                 lic_token: match.lic_token, // DRM token for secure streaming
+                stream_link: cleanedStreamLink,
+                 clearkey_hex_key2: clearkeyParts[1] || null, 
+                 lic_url: match.lic_url,
+                 lic_token: match.lic_token, 
              };
          });
 
-         const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
+         const matchesFromFifthJson = data4.fixtures.flatMap((fixture) => {
           return fixture.streams
               .filter((stream) => {
-                  // Ensure streamName exists before calling toLowerCase()
                   const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
                   const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE";
                   return containsCricket && isUpcomingOrLive;
@@ -257,19 +218,18 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
                   match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
                   banner: fixture.competitionImageUrl,
                   stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
-                  status: stream.status, // Keep original status, excluding "Match Completed"
+                  status: stream.status,
                   date: stream.startTime,
-                  hls: fixture.competitionImageUrl, // Ensure correct HLS URL usage
+                  hls: fixture.competitionImageUrl,
               }));
       });
 
-        // Combine all live matches
+    
         const liveMatches = [
             ...matchesFromFirstJson,
-            ...matchesFromSecondJson,
             ...matchesFromThirdJson,
            ...matchesFromFourthJson,
-         ...matchesFromFifthJson, // Include fourth JSON data
+         ...matchesFromFifthJson, 
         ];
 
         container.innerHTML = '';
@@ -283,7 +243,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
         liveMatches.forEach((match) => {
             const matchDiv = document.createElement('div');
             matchDiv.classList.add('song');
-            matchDiv.style.cursor = 'pointer'; // Make it look clickable
+            matchDiv.style.cursor = 'pointer'; 
             matchDiv.onclick = () => {
                 if (match.stream_link && match.clearkey_hex_key1 && match.clearkey_hex_key2) {
                     const playerUrl = `https://shadowplayer.netlify.app/?manifest=${match.stream_link}&keyid=${match.clearkey_hex_key1}&key=${match.clearkey_hex_key2}&cookie=&userAgent=`;
