@@ -9,10 +9,9 @@ const FT = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const [response1, response2, response3,response4,response5] = await Promise.all([
+        const [response1, response2, response3,response4] = await Promise.all([
         //fetch('https://sony-eight.vercel.app/'),
           fetch("https://raw.githubusercontent.com/drmlive/sliv-live-events/main/sonyliv.json"),
-          fetch("https://jiocinema-livid.vercel.app/"),
           fetch("https://fancode-two.vercel.app/"),
           fetch("https://gxr.vercel.app/"),
           fetch("https://cric-aus.vercel.app/")
@@ -24,7 +23,7 @@ const FT = () => {
         const data2 = await response2.json();
         const data3 = await response3.json();
         const data4 = await response4.json();
-        const data5 = await response5.json();
+
 
 
                 // Normalize the match data for each JSON
@@ -60,26 +59,7 @@ const FT = () => {
           broadcast_channel: match.broadcast_channel || "",
         }));
 
-const matchesFromSecondJson = Array.from(
-    new Map(
-        data2.map((match) => [
-            match.id || 'unknown', // Use `match.id` or 'unknown' as the unique key
-            {
-                match_id: match.id || 'unknown',
-                match_name: match.title || 'Unnamed Match',
-                banner: match.logo || '',  // Use `logo` as the banner for display
-                stream_link: match.link === 'URL not found' 
-                    ? 'https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd&keyid=ae26845bd33038a9c0774a0981007294&key=63ac662dde310cfb4cc6f9b43b34196d&cookie=&userAgent=' 
-                    : modifyUrl(match.link), // Use `modifyUrl` for valid `match.link`
-                hls: match.logo || '',  // Assuming `match.hls` should be used for HLS data
-               status: "LIVE",
-            }
-        ])
-    ).values() // Extract only the values (unique matches)
-);
-
-
-        const matchesFromThirdJson = data3.matches.map((match) => ({
+        const matchesFromThirdJson = data2.matches.map((match) => ({
           match_id: match.match_id,
           match_name: match.status === "UPCOMING" ? "UPCOMING" : match.title,
           banner: match.src,
@@ -93,7 +73,7 @@ const matchesFromSecondJson = Array.from(
           hls: match.src,
         }));
 
-         const matchesFromFourthJson = data4.matches.map((match) => {
+         const matchesFromFourthJson = data3.matches.map((match) => {
            const clearkeyParts = match.clearkey_hex ? match.clearkey_hex.split(":") : [];
            const cleanedStreamLink = match.mpd_url ? match.mpd_url.replace(/\\\//g, '/') : null;
            return {
@@ -115,7 +95,7 @@ const matchesFromSecondJson = Array.from(
            };
        });
 
-       const matchesFromFifthJson = data5.fixtures.flatMap((fixture) => {
+       const matchesFromFifthJson = data4.fixtures.flatMap((fixture) => {
          return fixture.streams
            .filter((stream) => {
              // Ensure streamName exists before calling toLowerCase()
@@ -143,7 +123,6 @@ const matchesFromSecondJson = Array.from(
         const liveMatches = [
             //...matchesFromHotstar,
           ...matchesFromFirstJson.filter((m) => m.status === "LIVE"),
-          ...matchesFromSecondJson.filter((m) => m.status === "LIVE"),
           ...matchesFromThirdJson.filter((m) => m.status === "LIVE"),
           ...matchesFromFourthJson.filter((m) => m.status === "LIVE"),
           ...matchesFromFifthJson.filter((m) => m.status === "LIVE"),
@@ -152,7 +131,6 @@ const matchesFromSecondJson = Array.from(
         const upcomingMatches = [
             //...matchesFromHotstar,
           ...matchesFromThirdJson.filter((m) => m.status === "UPCOMING"),
-          ...matchesFromFirstJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromFourthJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromSecondJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromFifthJson.filter((m) => m.status === "UPCOMING"),
@@ -224,10 +202,4 @@ const matchesFromSecondJson = Array.from(
 
 export default FT;
 
-// Helper function to modify URLs
-function modifyUrl(url) {
-  if (!url) return null;
-  const strippedUrl = url.split("?")[0];
-  const withoutP = strippedUrl.replace("sportsp", "sports");
-  return withoutP.replace(".jiocinema", "-cf.jiocinema");
-}
+
