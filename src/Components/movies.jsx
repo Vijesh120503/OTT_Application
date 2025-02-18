@@ -9,6 +9,7 @@ const shows = [
     name: 'Theatre Print',
     image: 'https://s2.r29static.com/bin/entry/2ab/0,791,5615,2948/x,80/1650643/image.jpg',
     shows: [
+        {name:'Fire',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeq_Q7rCVwj1dEGyMTNUvvzZh-6xhOAR5bUw&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Fire%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Thandel',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRppQKLkGTsxaPv9ECnI3dm27xFsxI9mxJCPuN334N1v3Dc3tO7ImiFmfx&s=10',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Thandel%20(2025)%20Tamil%20PRE%20HD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Vidamuyarchi',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqwIXRVFB8gSJHU5ULuBhTE7qo4tIEWHBIA&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vidaamuyarchi%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Mr.Housekeeping',image:'https://assetscdn1.paytm.com/images/cinema/Mr.HouseKeeping--Gallery-a0e7d350-aafd-11ef-8bec-85ca743197e0.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Mr%20House%20Keeping%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20MP3%20-%20700MB.mkv'},
@@ -36,13 +37,10 @@ const shows = [
        {name:'Miss You', image:'https://m.media-amazon.com/images/M/MV5BZjFlOTg1MDUtYTMwOS00MDBlLWE4ZjAtZjAzZWJjYzEyZWNjXkEyXkFqcGc@._V1_.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Miss%20You%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'}, 
       {name:'Soodhu Kavvum 2',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF5A5s85hmdSY-b3Wfd_nR4O7jUHobQy3uBGiESgEFmmljs5hjU7buCWmz&s=10',link:'hhttps://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Soodhu%20Kavvum%202%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
       {name:'Sorgavasal',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCC9jidQLJVO793u5iJCAX7nH26bWwKynS9XfF5GJRYdvJGU6qz2qkJcM&s=10',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Sorgavaasal%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'}, 
-      {name:'SIR', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqtRVLhfpC7jveOTXFVu0sG1Tt-dAfUIoA08ytB-VbIw&s',link:'http://new.bharathmovies.cloud/AgADdR1178'},
       //{ name:'Kanguva',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwqsHIIojmSJFVRY9gQlbY6NaQDNaUsu-b90mfCkI0PJHxf5nJzCJ-m0&s=10',link:'https://blacktv.in/Kanguva.mp4'},
       {name:'Jolly O Gymkhana',image:'https://assetscdn1.paytm.com/images/cinema/Jolly-O-Gymkhana--6baf0b40-a3fa-11ef-b945-57c02e367648.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Jolly%20O%20Gymkhana%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
-      {name:'Emakku Thozhil Romance',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf8wO5oNbp6PVgLRJw87MPqQZQtP326ngzfs-MEpoAXdOzbHVAg90RMIx_&s=10',link:'https://dls3.mrfooll.xyz/AgADfR3396871'},
       {name:'Nirangal Moondru',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGuxpGEgPwy98GvUvxfCM91UanD3UG0uvdFp1ncsrwCoCl1mEpABu-Bmn&s=10',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Nirangal%20Moondru%20(2024)%20Tamil%20WEB%20HD%20700%20MB.mkv'},
-      {name:'Lucky Baskhar',image:'https://tsneh.vercel.app/huef1u-3-e0p',link:'http://new.bharathmovies.cloud/AgADzB1138'},
-      {name:'Line Man',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4VYdC7jlraoiMX7Dg3EpV8AKv3dMduTHTBo3Dg68X5lJRbsjEfLe6rjSj&s=10',link:'http://thalapathy3-fe06de7312fd.herokuapp.com/AgAD5x524'},
+    
   //   { name:'Amaran',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzugiP-FGYgjDvKH0orm9a3csrkqljfNSwqVBS9yIeVA3_2EUNNAizHBMD&s=10',link:'https://blacktv.in/Amaran.mp4'},
   //  { name:'Bloody Beggar',image:'https://upload.wikimedia.org/wikipedia/en/4/40/Bloody_Beggar.jpg',link:'https://cdn.boostpng.com/Bloody_Beggar_(2024)_Tamil_1080p.mkv'},
   //   { name:'Brother',image:'https://timesofindia.indiatimes.com/photo/103798855.cms',link:'https://blacktv.in/Brother.mp4'},
