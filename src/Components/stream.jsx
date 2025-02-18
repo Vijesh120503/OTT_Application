@@ -14,7 +14,7 @@ const LiveSports = () => {
           fetch("https://raw.githubusercontent.com/drmlive/sliv-live-events/main/sonyliv.json"),
           fetch("https://fancode-two.vercel.app/"),
           fetch("https://gxr.vercel.app/"),
-          fetch("https://cric-aus.vercel.app/")
+          
         ]);
 
         if (!response1.ok ||!response2.ok ||!response3.ok) {throw new Error("Failed to fetch matches");}
@@ -22,7 +22,7 @@ const LiveSports = () => {
         const data1 = await response1.json();
         const data2 = await response2.json();
         const data3 = await response3.json();
-        const data4 = await response4.json();
+      
 
         const matchesFromFirstJson = data1.matches.map((match) => ({
           match_id: match.contentId,
@@ -70,25 +70,7 @@ const LiveSports = () => {
            };
        });
 
-       const matchesFromFifthJson = data4.fixtures.flatMap((fixture) => {
-         return fixture.streams
-           .filter((stream) => {
-            const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
-             const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE" || stream.status === "Match Completed";
-             return containsCricket && isUpcomingOrLive;
-           })
-           .map((stream) => {
-             return {
-              match_id: fixture.fixtureId,
-             match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
-              banner: fixture.competitionImageUrl,
-              stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
-              status: stream.status, 
-              date: stream.startTime,
-              hls: fixture.competitionImageUrl, 
-      };
-           });
-       });
+       
       
 
         const liveMatches = [
@@ -96,7 +78,7 @@ const LiveSports = () => {
           ...matchesFromFirstJson.filter((m) => m.status === "LIVE"),
           ...matchesFromThirdJson.filter((m) => m.status === "LIVE"),
           ...matchesFromFourthJson.filter((m) => m.status === "LIVE"),
-          ...matchesFromFifthJson.filter((m) => m.status === "LIVE"),
+      
         ];
 
         const upcomingMatches = [
@@ -104,7 +86,6 @@ const LiveSports = () => {
           ...matchesFromThirdJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromFirstJson.filter((m) => m.status === "UPCOMING"),
           ...matchesFromFourthJson.filter((m) => m.status === "UPCOMING"),
-          ...matchesFromFifthJson.filter((m) => m.status === "UPCOMING"),
         ];
 
         const allMatches = [...liveMatches, ...upcomingMatches];
