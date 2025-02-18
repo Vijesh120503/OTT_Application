@@ -148,11 +148,11 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
     if (!container) return;
     container.innerHTML = '<p style="color: white;">Loading matches...</p>';
     try {
-        const [response1, response2, response3, response4] = await Promise.all([
+        const [response1, response2, response3] = await Promise.all([
             fetch('https://sony-eight.vercel.app/'),
             fetch('https://fancode-two.vercel.app/'),
              fetch('https://gxr.vercel.app/'), // New API
-             fetch('https://cric-aus.vercel.app/'),
+            
         ]);
         
         if (!response1.ok && !response2.ok && !response3.ok ) {
@@ -162,7 +162,7 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
         const data1 = await response1.json();
         const data2 = await response2.json();
         const data3 = await response3.json();
-       const data4 = await response4.json(); 
+       
 
 
         const matchesFromFirstJson = data1.matches
@@ -206,30 +206,13 @@ const Heros = ({ onNavClick,onSongChange, onAudioChange }) => {
              };
          });
 
-         const matchesFromFifthJson = data4.fixtures.flatMap((fixture) => {
-          return fixture.streams
-              .filter((stream) => {
-                  const containsCricket = stream.streamName?.toLowerCase().includes("cricket");
-                  const isUpcomingOrLive = stream.status === "UPCOMING" || stream.status === "LIVE";
-                  return containsCricket && isUpcomingOrLive;
-              })
-              .map((stream) => ({
-                  match_id: fixture.fixtureId,
-                  match_name: stream.status === "UPCOMING" ? "UPCOMING" : fixture.matchName,
-                  banner: fixture.competitionImageUrl,
-                  stream_link: stream.status === "UPCOMING" ? null : stream.stream_url,
-                  status: stream.status,
-                  date: stream.startTime,
-                  hls: fixture.competitionImageUrl,
-              }));
-      });
+         
 
     
         const liveMatches = [
             ...matchesFromFirstJson,
             ...matchesFromThirdJson,
            ...matchesFromFourthJson,
-         ...matchesFromFifthJson, 
         ];
 
         container.innerHTML = '';
