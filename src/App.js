@@ -9,6 +9,7 @@ import Livetwo from './Components/LIVETWO';
 import Series from './Components/Series';
 import Video from './Components/video';
 import Stream from './Components/stream';
+import Livevlc from './Components/live';
 
 const App = () => {
   return (
@@ -86,6 +87,7 @@ const MainApp = () => {
         <Route path="/Series" element={<Series />} />
         <Route path="/Video-Songs" element={<Video />} />
         <Route path="/Sports" element={<Stream />} />
+          <Route path="/TV-vlc" element={<Livevlc />} />
       </Routes>
     </div>
   );
