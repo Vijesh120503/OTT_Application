@@ -96,6 +96,7 @@ const Movies = () => {
        { name: 'Eurosport', image: 'https://metaimg.sundirectgo.in/144727/250x250_EurosportHD_144727_97e16e13-18b5-4fcf-8663-fad02604c631.png', link: 'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fsundirectgo-live.pc.cdn.bitgravity.com%2Fsvchd5%2Fdth.mpd&keyid=74dfd06c958e4d29b6f3b4b8e49d8bcd&key=bbe2691572cadceae4ab9deb7b88ef65&cookie=&userAgent=' },
       //{name:'Sky Sports Cricket',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsJfrsgftMR01aAAfBLA5nTPdR3cYhfb31rg&usqp=CAU',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fcx55.xyz%2FUK_SKY_SPORTS_CRICKET%2Ftracks-v1a1%2Fmono.ts.m3u8%3Ftoken%3D0c212cd056dc5c0ecd171b719721014f&keyid=&key=&cookie=&userAgent='},
       {name:'Willow',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHXdNXAFiYhzWMa1Dsnn5TXkby2CNO0bhzAUYfPuuAZykZD1YQ7ZITMut3&s=10',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fa201aivottlinear-a.akamaihd.net%2FOTTB%2Flhr-nitro%2Fclients%2Fdash%2Fenc%2Ff60kqesunw%2Fout%2Fv1%2Fa435ed7a00f947deb4369b46d8f2fb70%2Fcenc.mpd%3F&keyid=1779c27b9d077a3ba0c9cc1bb9a94b9f&key=cc5cf3b7928fb9e0a1ee6a8b566f0a8e&cookie=&userAgent='},
+      {name:'Ten cricket',image:'https://ethnicchannels.com/images/channeldetail/ten-cricket/ten-ckt-logo.png',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fedge3-moblive.yuppcdn.net%2Fdrm%2Fsmil%3Atencricketdrm.smil%2Fmanifest.mpd&keyid=9872e439f21f4a299cab249c6554daa3&key=0cdfcfe0d0f1fbe100554ce3ef4c4665&cookie=&userAgent='},
     ],},
   
     {
