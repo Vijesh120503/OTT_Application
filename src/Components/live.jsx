@@ -606,6 +606,7 @@ const TV = () => {
     <div className="content">
       {selectedAlbum ? (
         <div className="album-details">
+                      <p style={{ color: "grey", padding: "5px" }}>Click on a channel and wait 5-10 sec it will redirect directly into vlc</p>
           <button onClick={handleBackClick} className="back-button">
             Back to Channels
           </button>
@@ -624,7 +625,7 @@ const TV = () => {
       ) : (
         <div className="play">
             <p style={{ color: "red", padding: "5px" }}>Download VLC player before using this section</p>
-            <p style={{ color: "grey", padding: "5px" }}>Click on a channel and wait 5-10 sec it will redirect directly into vlc</p>
+
 
 
           {predefinedChannels.map((album, index) => (
