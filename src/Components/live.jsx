@@ -623,11 +623,9 @@ const TV = () => {
           </div>
         </div>
       ) : (
+         <p style={{ color: "red", padding: "5px" }}>Download VLC player before using this section</p>
+
         <div className="play">
-            <p style={{ color: "red", padding: "5px" }}>Download VLC player before using this section</p>
-
-
-
           {predefinedChannels.map((album, index) => (
             <div key={index} className="son" onClick={() => handleAlbumClick(album)} style={{ marginBottom: "5px" }} >
               <img src={album.image} alt={album.name} />
