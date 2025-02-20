@@ -4,7 +4,7 @@ import './album.css';
 
 
 
-const Movies = () => {
+const TV = () => {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
 
   const predefinedChannels = [
@@ -623,8 +623,12 @@ const Movies = () => {
         </div>
       ) : (
         <div className="play">
+            <p style={{ color: "red", padding: "5px" }}>Download VLC player before using this section</p>
+            <p style={{ color: "grey", padding: "5px" }}>Click on a channel and wait 5-10 sec it will redirect directly into vlc</p>
+
+
           {predefinedChannels.map((album, index) => (
-            <div key={index} className="son" onClick={() => handleAlbumClick(album)}>
+            <div key={index} className="son" onClick={() => handleAlbumClick(album)} style={{ marginBottom: "5px" }} >
               <img src={album.image} alt={album.name} />
                 <p>{album.name}</p>
 
@@ -636,4 +640,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default TV;
