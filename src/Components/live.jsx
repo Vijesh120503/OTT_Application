@@ -606,7 +606,7 @@ const TV = () => {
     <div className="content">
       {selectedAlbum ? (
         <div className="album-details">
-                      <p style={{ color: "grey", padding: "5px" }}>Click on a channel and wait 5-10 sec it will redirect directly into vlc</p>
+          <p style={{ color: "grey", padding: "5px" }}>Click on a channel and wait 5-10 sec it will redirect directly into vlc</p>
           <button onClick={handleBackClick} className="back-button">
             Back to Channels
           </button>
@@ -622,9 +622,9 @@ const TV = () => {
             ))}
           </div>
         </div>
-      ) : (
-         <p style={{ color: "red", padding: "5px" }}>Download VLC player before using this section</p>
-
+      ) : ( 
+      <div>
+             <p style={{ color: "red", padding: "5px" }}>Download VLC player before using this section</p>
         <div className="play">
           {predefinedChannels.map((album, index) => (
             <div key={index} className="son" onClick={() => handleAlbumClick(album)} style={{ marginBottom: "5px" }} >
@@ -632,6 +632,7 @@ const TV = () => {
                 <p>{album.name}</p>
 
             </div>
+        </div>
           ))}
         </div>
       )}
