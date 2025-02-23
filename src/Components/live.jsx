@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+  import React, { useState } from "react";
 import './live.css';
 import './album.css';
 
 
 
-const TV = () => {
+const Tv = () => {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
 
   const predefinedChannels = [
@@ -12,135 +12,115 @@ const TV = () => {
     [
         {
             "name": "Adhithya Tv",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Nhg12EtEEy3aFfRgcM2S0CwMaW1wGiI_8Y7B-RRqMW56HWbx0ebgQsM&s=10",
             "link": "tinyurl.com/bddrads4"
         },{
             "name": "Colors Tamil HD - Rs 7.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tinyurl.com/yc2kz4ck",
             "link": "tinyurl.com/e3arvc5k"
         },{
             "name": "Isai Aruvi - Rs 4.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tsneh.vercel.app/wjqhyyohoqcc",
             "link": "tinyurl.com/2jfufuap"
         },
         {
             "name": "J Movies",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://jiotvimages.cdn.jio.com/dare_images/images/J_Movies.png",
             "link": "tinyurl.com/yhkfympa"
         },
         {
             "name": "Jaya Max - Rs 2.25",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://i.pinimg.com/originals/8a/87/d6/8a87d6ec29890bf98e9f994ec8fb9e70.jpg",
             "link": "tinyurl.com/2ha9fdad"
         },
         {
             "name": "Jaya TV HD - Rs 6.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZLbE5_4NKtis11wQ9PIMzGFlRWmZe6B0lMQ&s",
             "link": "tinyurl.com/59rx43tm"
         },
         {
-            "name": "Jothi Tv",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
-            "link": "tinyurl.com/2k5nt5rh"
-        },
-        {
             "name": "KTV HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://seeklogo.com/images/K/ktv-logo-703754480A-seeklogo.com.png",
             "link": "tinyurl.com/4vyxf2rj"
         },
         {
             "name": "Kalingnar",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tsneh.vercel.app/fzqicp5wkped",
             "link": "tinyurl.com/r6vnmpu5"
-        },{
-            "name": "Mega 24",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
-            "link": "tinyurl.com/5n8rmfee"
         },
-        {
-            "name": "Mega TV - Rs 3.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
-            "link": "tinyurl.com/33zzrup7"
-        },
-
         {
             "name": "Murasu TV - Rs 12.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tsneh.vercel.app/94gttrvxkuwf",
             "link": "tinyurl.com/2s632rtf"
         },
 {
             "name": "Polimer",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://yuppstatic.akamaized.net/yupptv/channel_logos_new/polimer_tv.png",
             "link": "tinyurl.com/dwuxta6d"
         },
         {
             "name": "Polimer News - C1",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://sarkaribazaar.com/wp-content/uploads/2020/07/polimer-news-logo.png",
             "link": "tinyurl.com/33cjbp6s"
         },
 
         {
             "name": "Raj TV - Rs 4.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/mam-images/2014/09/24/ik.jpg?itok=f7Nk4kCj",
             "link": "tinyurl.com/yejd5v9b"
         },{
             "name": "Sethigal",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://media.assettype.com/kalaignarseithigal/2019-04/273604e9-3c45-44a4-9866-9584c01fddbd/NEWS_01.png?w=1200&auto=format%2Ccompress&ogImage=true",
             "link": "tinyurl.com/3tcrckxb"
         },
         {
             "name": "Sirippoli TV - Rs 8.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tsneh.vercel.app/bril2azbth2y",
             "link": "tinyurl.com/38mjru7n"
         },
         {
             "name": "Sun Music HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Sun_Music_%28No_Background%29.png",
             "link": "tinyurl.com/y2tyj2c6"
         },
         {
             "name": "Sun News",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://seeklogo.com/images/S/sun-news-logo-107E32491A-seeklogo.com.png",
             "link": "tinyurl.com/3m9fjzy5"
         },
         {
             "name": "Sun TV HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tinyurl.com/55rjk5ka",
             "link": "tinyurl.com/yc53y4fa"
         },
         {
             "name": "Thanthi TV - Free",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://i.pinimg.com/originals/e7/67/5a/e7675a5209137e5cc027693fd037e67a.png",
             "link": "tinyurl.com/yc86rxxr"
         },
         {
             "name": "Vijay HD - Rs 22.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tinyurl.com/2heavac5",
             "link": "tinyurl.com/3mcd5tyy"
         },
         {
             "name": "Vijay Super HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQjonzzKzBGJJKpe1_FrbiyAwiMGAEGftloixlGuyIqiS6rRIkFTDArP4&s=10",
             "link": "tinyurl.com/4z3dr8nc"
         },
         {
             "name": "Vijay Takkar - Rs 2.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://news.indiantvinfo.com/media/2022/09/Logo-of-Vijay-Takkar-Channel-300x300.png",
             "link": "tinyurl.com/3hsj83ef"
-        },
-                {
-            "name": "Zee Tamil - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
-            "link": "tinyurl.com/58uf3sph"
         },
         {
             "name": "Zee Tamil HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://www.ethnicchannels.com/images/channeldetail/zee-tamil/ZEE-TAMIL.png",
             "link": "tinyurl.com/29s7tpkn"
         },
         {
             "name": "Zee Thirai HD - Rs 16.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://vignette.wikia.nocookie.net/logopedia/images/c/c3/Zee_Thirai.png/revision/latest?cb=20200324034033",
             "link": "tinyurl.com/zness34s"
         },
 
@@ -474,113 +454,113 @@ const TV = () => {
     {name:'Sports',image:'https://tse1.mm.bing.net/th?id=OIP.goZKyJjJlMRdXSpUEWbzYAHaEK&pid=Api&P=0&h=220',shows:[
         {
             "name": "SONY SPORTS TEN 1 HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_HD.png",
             "link": "tinyurl.com/yck7bcy3"
         },
         {
             "name": "SONY SPORTS TEN 2 HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "http://jiotv.catchup.cdn.jio.com/dare_images/images/Ten2_HD.png",
             "link": "tinyurl.com/yeyscefd"
         },
         {
             "name": "SONY SPORTS TEN 3 HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://origin-staticv2.sonyliv.com/masthead_logo/Sony_TEN3HD_23oct_masthead_logo.png",
             "link": "tinyurl.com/yc2s2yun"
         },
         {
             "name": "SONY SPORTS TEN 5 HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png",
             "link": "tinyurl.com/3xnjn5db"
         },
         {
             "name": "Sports 18 - 1 HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://www.sports18.com/wp-content/themes/sports18/assets/images/sports18hd1FS.png",
             "link": "tinyurl.com/ykbhkykd"
         },
         {
             "name": "Sports 18 2 - Rs 1.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_2.png",
             "link": "tinyurl.com/vecz593d"
         },
         {
             "name": "Star Sports 1 HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://the-media-ant.mo.cloudinary.net/medias/55fb00a28ead0e79178b5e80/1660038655786/star%20sports%201%20logo_logo.png?tx=w_350",
             "link": "tinyurl.com/4pu5ym3y"
         },
         {
             "name": "Star Sports 1 Hindi HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://assets.airtel.in/static-assets/cms/dth/images/channellogo/Star-Sports-1-Hindi.png",
             "link": "tinyurl.com/2326dm33"
         },
         {
             "name": "Star Sports 1 Tamil HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://vignette.wikia.nocookie.net/logopedia/images/f/fb/Star_Sports_Tamil.png/revision/latest/scale-to-width-down/220?cb=20170728072716",
             "link": "tinyurl.com/3y38mcjd"
         },
         {
             "name": "Star Sports 1 Telugu HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://www.insidesport.in/wp-content/uploads/2018/12/Star-Sports.jpg",
             "link": "tinyurl.com/kjrurzva"
         },
         {
             "name": "Star Sports 2 HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://i.pinimg.com/474x/27/a5/3a/27a53a041be3eb0b8574c267e071a1ff--sport--cricket-update.jpg",
             "link": "tinyurl.com/2p9zcnp4"
         },
         {
             "name": "Star Sports 3 - Rs 2.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://yt3.ggpht.com/a/AATXAJzYQEp-HrpCs69iHS1zAqwrO-tUjoqJNmji4A=s900-c-k-c0xffffffff-no-rj-mo",
             "link": "tinyurl.com/yc3jsvdr"
         },
         {
             "name": "Star Sports First - Rs 0.50",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://www.tataplay.com/s3-api/v1/assets/channels/star-sports-first.gif",
             "link": "tinyurl.com/389fk5zb"
         },
         {
             "name": "Star Sports Select 1 HD - Rs 19.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://yt3.ggpht.com/a/AATXAJzwmOU27tt-r2hlDl9EX4fGEXC8k0bQppNcquvA=s900-c-k-c0xffffffff-no-rj-mo",
             "link": "tinyurl.com/3jm2jy3p8"
         },
         {
             "name": "Star Sports Select 2 HD - Rs 15.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tma-live.s3.ap-south-1.amazonaws.com/medias/5989affc420c3c1917b60341/1600329108394/Star-Sports-Select-2_logo.png",
             "link": "tinyurl.com/yudwdmh4"
         },
     ]},
     {name:'Infotainment',image:'https://i.pinimg.com/736x/47/cd/cb/47cdcb6565610531dd4a06fcd1e77d8a--letter-i.jpg',shows:[
         {
             "name": "Animal Planet HD  - Rs 5.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzVe842a4KEP0VkTznyYtn0kw5274b2C6lJ3Bx1sVLsw&s",
             "link": "tinyurl.com/yc3x3z7r"
         },
  {
             "name": "Discovery HD - Rs 8.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://wikiwandv2-19431.kxcdn.com/_next/image?url=https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Discovery_tamil_logo.png/640px-Discovery_tamil_logo.png&w=640&q=50",
             "link": "tinyurl.com/2pwettkv"
         },{
             "name": "History TV18 HD - Rs 7.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tse3.mm.bing.net/th?id=OIP.ah9UnFCN7FK_kVVDgiB-KgHaEK&pid=Api&P=0&h=220",
             "link": "tinyurl.com/3nmkj4t8"
         },
          {
             "name": "NATIONAL GEOGRAPHIC HD - Rs 14.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://tse2.mm.bing.net/th?id=OIP.5mlvIzvM9Bktlh56wswfJwHaD9&pid=Api&P=0&h=220",
             "link": "tinyurl.com/4v65bbaz"
         },
 
         {
             "name": "Nat Geo Wild HD - Rs 8.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://i.pinimg.com/originals/47/3c/0f/473c0fc27fa98aa257399c0d0075fec1.jpg",
             "link": "tinyurl.com/mcu7wzsz"
         },
         {
             "name": "SONY BBC EARTH HD - Rs 19.00_OLD",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://origin-staticv2.sonyliv.com/videoasset_images/sony_bbchd_23oct_masthead_logo.png",
             "link": "tinyurl.com/3um6333m"
         },{
             "name": "TLC HD - Rs 3.00",
-            "image": "https://tsneh.vercel.app/fjkec8ucpiig",
+            "image": "https://logonoid.com/images/tlc-logo.png",
             "link": "tinyurl.com/4tx9b9pp"
         },
     ]},
@@ -606,31 +586,39 @@ const TV = () => {
     <div className="content">
       {selectedAlbum ? (
         <div className="album-details">
-          <p style={{ color: "grey", padding: "5px" }}>Click on a channel and wait 5-10 sec it will redirect directly into vlc</p>
-          <button onClick={handleBackClick} className="back-button">Back to Channels </button>
+          <button onClick={handleBackClick} className="back-button">
+            Back to Channels
+          </button>
           <h2 className="hi">{selectedAlbum.name}</h2>
           <div className="play">
             {selectedAlbum.shows.map((video, index) => (
               <div key={index} className="son" onClick={() => handleVideoClick(video)}>
                 <img src={video.image} alt={video.name} />
-                 <p>{video.name}</p>
+                 {selectedAlbum.name !== "Sports" && selectedAlbum.name !== "Tamil"  && selectedAlbum.name !== "Infotainment" ? (
+                  <p>{video.name}</p>
+                ) : null}
+              }
               </div>
             ))}
           </div>
         </div>
-      ) : ( 
-      <div>
-            <p style={{ color: "red", padding: "5px" }}>Download VLC player before using this section</p>
-            <div className="play">
-            {predefinedChannels.map((album, index) => (
-             <div key={index} className="son" onClick={() => handleAlbumClick(album)} style={{ marginBottom: "5px" }} >
-               <img src={album.image} alt={album.name} />
-                 <p>{album.name}</p>
-              </div>
+      ) : (
+        <div>
+             <p style={{ color: "red", padding: "5px" }}>Download VLC player before using this section</p>
+
+        <div className="play">
+          {predefinedChannels.map((album, index) => (
+            <div key={index} className="son" onClick={() => handleAlbumClick(album)} style={{ marginBottom: "5px" }} >
+              <img src={album.image} alt={album.name} />
+                <p>{album.name}</p>
+
+            </div>
           ))}
-             </div>
         </div>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default TV;
+export default Tv;
