@@ -9,8 +9,10 @@ const shows = [
     name: 'Theatre Print',
     image: 'https://s2.r29static.com/bin/entry/2ab/0,791,5615,2948/x,80/1650643/image.jpg',
     shows: [
-        {name:'2K Love Story',image:'',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/2K%20Love%20Story%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
-        {name:'Baby and Baby',image:'',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Baby%20and%20Baby%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
+       // {name:'Neek',image:'',link:''},
+        {name:'Dragon',image:'https://assetscdn1.paytm.com/images/cinema/Dragon-galery-08d794a0-cc0a-11ef-912e-2154ccd78c0a.jpg',link:'https://dl3.hotshare.click/Dragon_2025_PreDVD_720p_HD.mp4'},
+        {name:'2K Love Story',image:'https://assetscdn1.paytm.com/images/cinema/2k-Love--Poster-17fc8c40-d7c9-11ef-b68a-217a8a741140.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/2K%20Love%20Story%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
+        {name:'Baby and Baby',image:'https://assetscdn1.paytm.com/images/cinema/Baby-and-Baby-ebbcc7a0-e7b1-11ef-b0cb-6f1a8f777f1f.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Baby%20and%20Baby%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Fire',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeq_Q7rCVwj1dEGyMTNUvvzZh-6xhOAR5bUw&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Fire%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Thandel',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRppQKLkGTsxaPv9ECnI3dm27xFsxI9mxJCPuN334N1v3Dc3tO7ImiFmfx&s=10',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Thandel%20(2025)%20Tamil%20PRE%20HD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB.mkv'},
         {name:'Mr.Housekeeping',image:'https://assetscdn1.paytm.com/images/cinema/Mr.HouseKeeping--Gallery-a0e7d350-aafd-11ef-8bec-85ca743197e0.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Mr%20House%20Keeping%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20MP3%20-%20700MB.mkv'},
