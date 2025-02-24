@@ -101,7 +101,7 @@ const Tv = () => {
         {
             "name": "Vijay HD - Rs 22.00",
             "image": "https://tinyurl.com/2heavac5",
-            "link": "tinyurl.com/3mcd5tyy"
+            "link": "webwatch.tech/MAC/live.php?id=778"
         },
         {
             "name": "Vijay Super HD - Rs 19.00",
