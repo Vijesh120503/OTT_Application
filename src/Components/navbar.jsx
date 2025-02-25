@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './live.css'; 
 
-const Navbar = ({ onNavClick }) => {
+const Navbar = ({ onNavClick, username }) => {
   const [isSideOpen, setIsSideOpen] = useState(false);
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
 
