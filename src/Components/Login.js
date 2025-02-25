@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../firebase";
+import { signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
+import { auth, provider } from "../firebase"; // Ensure this path is correct
 import { useNavigate } from "react-router-dom";
-
-const provider = new GoogleAuthProvider();
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,14 +9,14 @@ const Login = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log("User:", currentUser); // Debugging to check user details
+      console.log("User:", currentUser);
       setUser(currentUser);
       if (currentUser) {
         navigate("/home");
       }
     });
 
-    return () => unsubscribe(); // Cleanup on unmount
+    return () => unsubscribe();
   }, [navigate]);
 
   const signInWithGoogle = async () => {
@@ -48,8 +46,8 @@ const Login = () => {
         <h2>Welcome to my OTT Website</h2>
         {user ? (
           <>
-            <p >Signed in as: <strong style={{ color: "white", fontSize: "18px" }}>{user.displayName || "User"}</strong></p>
-            <button onClick={handleLogout}>gumtha</button>
+            <p>Signed in as: <strong style={{ color: "white", fontSize: "18px" }}>{user.displayName || "User"}</strong></p>
+            <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
           <button onClick={signInWithGoogle}>Sign in with Google</button>

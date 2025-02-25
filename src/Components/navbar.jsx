@@ -30,9 +30,8 @@ const Navbar = ({ onNavClick, username, onLogout }) => {
     <>
       <div className='navflex'>
         <img src="./line.jfif" alt="line" onClick={toggleSide} />
-        <span style={{ color: "white", fontSize: "18px",}} className="username">Welcome {username}</span>
+        <span className="username" style={{ color: "white" }}>{username}</span>
         <div>
-        
           <img 
             src="https://static.vecteezy.com/system/resources/previews/009/793/387/non_2x/india-currency-rupee-icon-symbol-illustration-vector.jpg" 
             alt="payment icon"  
@@ -44,7 +43,8 @@ const Navbar = ({ onNavClick, username, onLogout }) => {
             style={{ cursor: "pointer" }}
             onClick={() => (window.location.href = "https://shadow-chat-1205.vercel.app/")}
           />
-          {/* <button onClick={onLogout}>Logout</button> */}
+
+          <button onClick={onLogout}>Logout</button>
         </div>
       </div>
       {isSideOpen && <SideNav onNavClick={handleNavClick} />}
