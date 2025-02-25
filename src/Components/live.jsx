@@ -483,32 +483,32 @@ const Tv = () => {
         },
         {
             "name": "Star Sports 1 HD - Rs 19.00",
-            "image": "https://the-media-ant.mo.cloudinary.net/medias/55fb00a28ead0e79178b5e80/1660038655786/star%20sports%201%20logo_logo.png?tx=w_350",
+            "image": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7074/597074-h",
             "link": "tinyurl.com/4pu5ym3y"
         },
         {
             "name": "Star Sports 1 Hindi HD - Rs 19.00",
-            "image": "https://assets.airtel.in/static-assets/cms/dth/images/channellogo/Star-Sports-1-Hindi.png",
+            "image": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/6998/596998-h",
             "link": "tinyurl.com/2326dm33"
         },
         {
             "name": "Star Sports 1 Tamil HD - Rs 19.00",
-            "image": "https://vignette.wikia.nocookie.net/logopedia/images/f/fb/Star_Sports_Tamil.png/revision/latest/scale-to-width-down/220?cb=20170728072716",
+            "image": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7017/597017-h",
             "link": "tinyurl.com/3y38mcjd"
         },
         {
             "name": "Star Sports 1 Telugu HD - Rs 19.00",
-            "image": "https://www.insidesport.in/wp-content/uploads/2018/12/Star-Sports.jpg",
+            "image": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7025/597025-h",
             "link": "tinyurl.com/kjrurzva"
         },
         {
             "name": "Star Sports 2 HD - Rs 19.00",
-            "image": "https://i.pinimg.com/474x/27/a5/3a/27a53a041be3eb0b8574c267e071a1ff--sport--cricket-update.jpg",
+            "image": "https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7076/597076-h",
             "link": "tinyurl.com/2p9zcnp4"
         },
         {
             "name": "Star Sports 3 - Rs 2.00",
-            "image": "https://yt3.ggpht.com/a/AATXAJzYQEp-HrpCs69iHS1zAqwrO-tUjoqJNmji4A=s900-c-k-c0xffffffff-no-rj-mo",
+            "image": "https://i.pinimg.com/originals/f6/30/40/f630405883d600e197b8e8a714bf7422.png",
             "link": "tinyurl.com/yc3jsvdr"
         },
         {
