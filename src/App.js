@@ -5,11 +5,12 @@ import Home from './Components/content';
 import Movies from './Components/movies';
 import Shows from './Components/Shows';
 import Kids from './Components/kids';
-import Livetwo from './Components/live';
+import Livetwo from './Components/LiveTwo';
 import Series from './Components/Series';
 import Video from './Components/video';
 import Stream from './Components/stream';
 import Login from './Components/Login';
+import Vlc from './Components/live';
 import { auth } from './firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 
@@ -117,6 +118,7 @@ const MainApp = () => {
             <Route path="/Series" element={<Series />} />
             <Route path="/VideoSongs" element={<Video />} />
             <Route path="/Sports" element={<Stream />} />
+            <Route path="/Mobile" element={<Vlc />} />
           </Routes>
         </>
       ) : (
