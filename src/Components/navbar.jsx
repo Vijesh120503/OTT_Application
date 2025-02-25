@@ -61,7 +61,7 @@ const SideNav = ({ onNavClick }) => {
       <ul>
         <li onClick={() => onNavClick('Home')}>Home</li>
         <li onClick={() => onNavClick('TV')}>Live TV</li>
-        <li onClick={() => onNavClick('Mobile')}>Live TV (vlc)</li>}
+        <li onClick={() => onNavClick('Mobile')}>Live TV (vlc)</li>
         <li onClick={() => onNavClick('Movies')}>Movies</li>
 {/*         <li onClick={() => onNavClick('Shows')}>TV Shows</li>
         <li onClick={() => onNavClick('Kids')}>Kids</li> */}
