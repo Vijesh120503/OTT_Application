@@ -9,6 +9,10 @@ const shows = [
     name: 'Theatre Print',
     image: 'https://s2.r29static.com/bin/entry/2ab/0,791,5615,2948/x,80/1650643/image.jpg',
     shows: [
+        {name:'Neek',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY5SY-sePmPC0EbIoPKyBYSPPgL4Og3ca37DmreY7m5QeiH0SwoinuH1Q&s=10',link:'https://dls3.mrfooll.xyz/AgADbi3684453'},
+        {name:'Dragon',image:'https://assetscdn1.paytm.com/images/cinema/Dragon-galery-08d794a0-cc0a-11ef-912e-2154ccd78c0a.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Dragon%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20AAC%20-%20700MB.mkv'},
+ {name:'Captain America',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUJsXek9A0mAYunJEITCnwbCjVzf8tugDQENOsxbOVlGa_JmGFu4kMSkU&s=10',link:'https%3A%2F%2Fs07.dubshare.one%2FCaptain_America_Brave_New_World_2025_360p_PreDVD.mp4'},
+{name:'Thandel',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRppQKLkGTsxaPv9ECnI3dm27xFsxI9mxJCPuN334N1v3Dc3tO7ImiFmfx&s=10',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vidaamuyarchi%20(2025)%20Tamil%20v2%20HDRip%20-%20x264%20-%20(AAC%202.0)%20-%20700MB%20-%20HC-ESub.mkv'},
         {name:'Mr.Housekeeping',image:'https://assetscdn1.paytm.com/images/cinema/Mr.HouseKeeping--Gallery-a0e7d350-aafd-11ef-8bec-85ca743197e0.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Mr%20House%20Keeping%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20MP3%20-%20700MB.mkv'},
         {name:'Kudumbasthan',image:'https://assetscdn1.paytm.com/images/cinema/Kudumbasthan-Poster-a4577dc0-d7e3-11ef-83bf-1dede4761f84.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Kudumbasthan%20(2025)%5BTamil%20-%20V2%20HQ-Real%20PreDVDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20HQ%20Line%20Audio%5D.mkv'},
         {name:'Bottle Radha',image:'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/14b98b211395965.672221259a2ca.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Bottle%20Radha%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Aud%20-%20700MB%20-%20HC-ESub.mkv'},
@@ -21,7 +25,7 @@ const shows = [
     name: 'HD Movies',
     image: 'https://play-lh.googleusercontent.com/5lGwoUsh5Z1eopCpGQIQjfoGqUHTJU_tAXNkdm1eiBVGGKoXqk5jX8Vm7DiAn42Lwbk6',
     shows: [
-        {name:'Bioscope',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kyaBJOQzVIiO1y9ruGo1bNZ-Q8inlhObKg&usqp=CAU',link:'https://dls3.mrfooll.xyz/AgADCW3514747'},
+         {name:'Vidamuyarchi',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqwIXRVFB8gSJHU5ULuBhTE7qo4tIEWHBIA&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vidaamuyarchi%20(2025)%20Tamil%20v2%20HDRip%20-%20x264%20-%20(AAC%202.0)%20-%20700MB%20-%20HC-ESub.mkv'},
         {name:'Vanangaan',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLRwf4wNzWB6EaievUesfVk75IZKVsDHXIg&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vanangaan%20(2025)%20Tamil%20HDRip%20-%20x264%20-%20AAC%20-%20700MB.mkv'},
         {name:'Madha Gaja Raja',image:'https://images.jdmagicbox.com/comp/jd_social/news/2018jul24/image-139962-cobm4nu9gq.jpg',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Madha%20Gaja%20Raja%20(2025)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB.mkv'},
         {name:'Thiru Manickam',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGTCw5Ktxd-t70okCzWMUKEeUTQT_f4SXCuw&usqp=CAU',link:'https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Thiru.Manickam%20(2024)%20Tamil%20HQ%20HDRip%20-%20x264%20-%20AAC%20-%20700MB%20-%20ESub.mkv'},
