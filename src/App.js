@@ -36,8 +36,8 @@ const MainApp = () => {
   const handleNavClick = (component) => {
     if (component === 'Albums') {
       window.location.href = 'https://shadow-music.netlify.app/';
-    } else {
-      navigate(/${component});
+    } else {navigate(`/${component}`);
+
     }
   };
 
