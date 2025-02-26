@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './live.css';
 const stream = [
- {name:'VID vs KER',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/629/1740508770629-h',link:'https://www.8088y.site/Jio-Cinema/play.php?id=SPORTS%2018%20Khel'},
+ {name:'VID vs KER',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/629/1740508770629-h',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fjcevents.jiocinema.com%2Fbpk-tv%2FSports18_Khel_voot_MOB%2FFallback%2Fhdntl%3Dexp%3D1740632547~acl%3D%252f*~id%3Dd46c34af6de30520e97b03183f4ccfe7~data%3Dhdntl~hmac%3D442b2493438e9f9c4b78e7036e11590b4f2dc691f42d499cdc4c47a9277f1881%2Findex.m3u8'},
  //{name:'CCL',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9101/1739461999101-h',link:'https://live.drmlive-02.workers.dev/sliv/ten3hd.m3u8'},
 //{name:'BRH vs SYS',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkaNjFqHKLIoqmOhx8KSXXG69AhjEngPkNZHCBjqrXRUa67hy8CHLMW1dA&s=10',link:'https://s.bdixtv24.com/sportstv.php?c=skyscric'},
 // {name:'2nd T20',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7822/1737535877822-h',link:'https://tsneh.vercel.app/tnt1-shadow'},
