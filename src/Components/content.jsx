@@ -2,13 +2,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './live.css';
 const stream = [
- {name:'VID vs KER',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/629/1740508770629-h',link:'https://www.8088y.site/Jio-Cinema/play.php?id=SPORTS%2018%20Khel'},
+ {name:'Champions Trophy',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/4153/1740482604153-h',link:'https://shadowplayer.netlify.app/?manifest=https%3A%2F%2Fsundirectgo-live.pc.cdn.bitgravity.com%2Fsrc63%2Fdth.mpd&keyid=e4fd0cfb63364b6a80f85d939330bd8a&key=3885572ee0abbde6a4a9270a1aa1dbfe&cookie=&userAgent='},
+  {name:'VID vs KER',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/629/1740508770629-h',link:'https://www.8088y.site/Jio-Cinema/play.php?id=SPORTS%2018%20Khel'},
  //{name:'CCL',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9101/1739461999101-h',link:'https://live.drmlive-02.workers.dev/sliv/ten3hd.m3u8'},
-//{name:'BRH vs SYS',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkaNjFqHKLIoqmOhx8KSXXG69AhjEngPkNZHCBjqrXRUa67hy8CHLMW1dA&s=10',link:'https://s.bdixtv24.com/sportstv.php?c=skyscric'},
-// {name:'2nd T20',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7822/1737535877822-h',link:'https://tsneh.vercel.app/tnt1-shadow'},
- // {name:'JSK vs PR',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_2048/sources/r1/cms/prod/532/1735025930532-a',link:'https://tapmadtv.live/play.php?c=willowusa'},
- // {name:'AUSW vs ENGW',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/75/1738148190075-h',link:'https://tsneh.vercel.app/tnt1-shadow'},
-//https://darshan.glitch.me/play.html?manifest=https%3A%2F%2Famg01269-amg01269c1-willowtv-us-5479.playouts.now.amagi.tv%2Fplaylist%2Famg01269-willowtvfast-willowplus-willowtvus%2Fplaylist.m3u8&drmToggle=false&drmType=clearkey&keyId=&key=&licenseUrl=
+
   ];
   
 const movies = [
