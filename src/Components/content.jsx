@@ -13,7 +13,7 @@ const stream = [
   ];
   
 const movies = [
-         {name:'Neek',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY5SY-sePmPC0EbIoPKyBYSPPgL4Og3ca37DmreY7m5QeiH0SwoinuH1Q&s=10',link:'https://shadow-movies.netlify.app/?manifest=https://dls3.mrfooll.xyz/AgADbi3684453'},
+         {name:'Neek',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY5SY-sePmPC0EbIoPKyBYSPPgL4Og3ca37DmreY7m5QeiH0SwoinuH1Q&s=10',link:'https://shadow-movies.netlify.app/?manifest=https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Nilavuku%20Enmel%20Ennadi%20Kobam%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20AAC%20-%20700MB.mkv'},
         {name:'Dragon',image:'https://assetscdn1.paytm.com/images/cinema/Dragon-galery-08d794a0-cc0a-11ef-912e-2154ccd78c0a.jpg',link:'https://shadow-movies.netlify.app/?manifest=https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Dragon%20(2025)%20Tamil%20HQ%20PreDVD%20-%20x264%20-%20HQ%20Clean%20Audio%20-%20AAC%20-%20700MB.mkv'},
  {name:'Captain America',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUJsXek9A0mAYunJEITCnwbCjVzf8tugDQENOsxbOVlGa_JmGFu4kMSkU&s=10',link:'https://shadow-movies.netlify.app/?manifest=https%3A%2F%2Fs07.dubshare.one%2FCaptain_America_Brave_New_World_2025_360p_PreDVD.mp4'},
  {name:'Vidamuyarchi',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqwIXRVFB8gSJHU5ULuBhTE7qo4tIEWHBIA&usqp=CAU',link:'https://shadow-movies.netlify.app/?manifest=https://pub-18418916b5a34df9a73eee4ebcfb4b64.r2.dev/Vidaamuyarchi%20(2025)%20Tamil%20v2%20HDRip%20-%20x264%20-%20(AAC%202.0)%20-%20700MB%20-%20HC-ESub.mkv'},
