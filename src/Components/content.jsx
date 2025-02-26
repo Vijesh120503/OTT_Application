@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './live.css';
 const stream = [
+ {name:'VID vs KER',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/629/1740508770629-h',link:'https://www.8088y.site/Jio-Cinema/play.php?id=SPORTS%2018%20Khel'},
  //{name:'CCL',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/9101/1739461999101-h',link:'https://live.drmlive-02.workers.dev/sliv/ten3hd.m3u8'},
 //{name:'BRH vs SYS',image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkaNjFqHKLIoqmOhx8KSXXG69AhjEngPkNZHCBjqrXRUa67hy8CHLMW1dA&s=10',link:'https://s.bdixtv24.com/sportstv.php?c=skyscric'},
 // {name:'2nd T20',image:'https://img10.hotstar.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/7822/1737535877822-h',link:'https://tsneh.vercel.app/tnt1-shadow'},
